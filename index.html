@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>A Savory Affair | Luxe Mobile Charcuterie &amp; Catering â€” South Elgin, IL</title>
-<meta name="description" content="A Savory Affair is a luxe mobile snack bar &amp; charcuterie catering service in South Elgin, IL. Grazing tables, charcuterie bars, frozen banana &amp; pancake bars, s'mores, cannoli &amp; mini cakes â€” we bring the sweetness to you." />
+<title>A Savory Affair | Luxe Mobile Charcuterie &amp; Catering &mdash; South Elgin, IL</title>
+<meta name="description" content="A Savory Affair is a luxe mobile snack bar &amp; charcuterie catering service in South Elgin, IL. Grazing tables, charcuterie bars, frozen banana &amp; pancake bars, s'mores, cannoli &amp; mini cakes &mdash; we bring the sweetness to you." />
 <link rel="canonical" href="https://a-savory-affair-south-elgin.vercel.app/" />
 <meta name="robots" content="index, follow" />
 <meta name="geo.region" content="US-IL" />
@@ -20,7 +20,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="A Savory Affair | Luxe Mobile Charcuterie &amp; Catering" />
-<meta name="twitter:description" content="Sweet. Savory. Unforgettable. We bring the grazing table to you â€” South Elgin &amp; the greater Fox Valley." />
+<meta name="twitter:description" content="Sweet. Savory. Unforgettable. We bring the grazing table to you &mdash; South Elgin &amp; the greater Fox Valley." />
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' x='8'%3E%F0%9F%8D%93%3C/text%3E%3C/svg%3E" />
 
@@ -60,16 +60,16 @@
 
 <style>
 :root{
-  --bg:#fbeee8;          /* solid blush cream â€” site-wide */
-  --deep:#43222a;        /* deep wine â€” footer only (2nd solid) */
+  --bg:#fbeee8;
+  --deep:#43222a;
   --card:#fffaf7;
-  --rose:#c8506e;        /* deep rose / raspberry â€” headings, prices */
+  --rose:#c8506e;
   --rose-deep:#a83a58;
-  --gold:#bd9a52;        /* logo gold â€” dividers, accents */
+  --gold:#bd9a52;
   --gold-soft:#d8c08a;
-  --blush:#eab4c0;       /* dusty ribbon pink */
+  --blush:#eab4c0;
   --blush-soft:#f6dde2;
-  --text:#4b3a38;        /* warm brown-grey body */
+  --text:#4b3a38;
   --muted:#8a7270;
   --line:#ecd9d2;
   --shadow:0 18px 50px -22px rgba(67,34,42,.30);
@@ -93,7 +93,6 @@ a{color:inherit;text-decoration:none}
 .wrap{width:min(1180px,92vw);margin-inline:auto}
 section{padding:96px 0;position:relative}
 
-/* â”€â”€ Decorative divider â”€â”€ */
 .divider{display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 14px;color:var(--gold)}
 .divider::before,.divider::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--gold))}
 .divider::after{background:linear-gradient(90deg,var(--gold),transparent)}
@@ -102,7 +101,6 @@ section{padding:96px 0;position:relative}
 .sec-title{text-align:center;font-size:clamp(2rem,4.4vw,3.1rem);color:var(--rose);font-weight:500;line-height:1.15}
 .sec-sub{text-align:center;max-width:640px;margin:18px auto 0;color:var(--muted);font-size:1.18rem;font-style:italic}
 
-/* â”€â”€ Buttons â”€â”€ */
 .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Cinzel',serif;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;padding:16px 34px;border-radius:50px;cursor:pointer;transition:.3s;border:1.5px solid transparent;white-space:nowrap}
 .btn-primary{background:var(--rose);color:#fff;box-shadow:0 14px 30px -12px rgba(200,80,110,.7);position:relative;overflow:hidden}
 .btn-primary:hover{background:var(--rose-deep);transform:translateY(-3px);box-shadow:0 20px 38px -12px rgba(200,80,110,.75)}
@@ -111,7 +109,6 @@ section{padding:96px 0;position:relative}
 .btn-ghost{background:transparent;color:var(--rose);border-color:var(--blush)}
 .btn-ghost:hover{background:var(--blush-soft);border-color:var(--rose);transform:translateY(-3px)}
 
-/* â”€â”€ Header â”€â”€ */
 header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.35s;padding:18px 0}
 header.scrolled{background:rgba(251,238,232,.86);backdrop-filter:blur(14px);box-shadow:0 6px 24px -18px rgba(67,34,42,.6);padding:10px 0}
 .nav{display:flex;align-items:center;justify-content:space-between}
@@ -125,11 +122,10 @@ header.scrolled .brand{font-size:1.8rem}
 .nav-links a.lk:hover::after{width:100%}
 .menu-toggle{display:none;background:none;border:none;color:var(--rose);font-size:1.7rem;cursor:pointer}
 
-/* â”€â”€ Hero â”€â”€ */
 .hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) brightness(1.02)}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(251,238,232,.96) 0%,rgba(251,238,232,.82) 42%,rgba(251,238,232,.35) 100%)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) brightness(1.02)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(251,238,232,.97) 0%,rgba(251,238,232,.86) 42%,rgba(251,238,232,.45) 100%)}
 .hero .wrap{position:relative;z-index:2}
 .hero-inner{max-width:660px}
 .hero .tag{font-family:'Cinzel',serif;text-transform:uppercase;letter-spacing:.3em;font-size:13px;color:var(--rose);margin-bottom:20px}
@@ -139,7 +135,6 @@ header.scrolled .brand{font-size:1.8rem}
 .hero .area{font-style:italic;color:var(--muted);margin-bottom:32px}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
 
-/* â”€â”€ Pillars â”€â”€ */
 .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:8px}
 .pillar{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 26px;text-align:center;box-shadow:var(--shadow-sm);transition:.35s}
 .pillar:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold-soft)}
@@ -147,7 +142,6 @@ header.scrolled .brand{font-size:1.8rem}
 .pillar h3{font-size:1.05rem;color:var(--rose);letter-spacing:.06em;margin-bottom:8px}
 .pillar p{color:var(--muted);font-size:1.05rem;line-height:1.55}
 
-/* â”€â”€ About â”€â”€ */
 .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
 .about-copy h2{text-align:left;font-size:clamp(1.9rem,4vw,2.8rem)}
 .about-copy .divider,.about-copy .eyebrow{margin-left:0;text-align:left;justify-content:flex-start}
@@ -155,12 +149,10 @@ header.scrolled .brand{font-size:1.8rem}
 .about-photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff;aspect-ratio:4/5}
 .about-photo img{width:100%;height:100%;object-fit:cover}
 
-/* â”€â”€ Photo placeholder â”€â”€ */
 .photo-ph{background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#c9b8a8;text-align:center}
 .photo-ph .cam{font-size:1.9rem;opacity:.85}
 .photo-ph small{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
 
-/* â”€â”€ Menu cards â”€â”€ */
 .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:18px}
 .m-card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);transition:.35s;display:flex;flex-direction:column}
 .m-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold-soft)}
@@ -177,16 +169,14 @@ header.scrolled .brand{font-size:1.8rem}
 .m-extra{margin-top:14px;font-size:.95rem;color:var(--text);border-top:1px dashed var(--line);padding-top:12px}
 .m-extra b{color:var(--rose-deep)}
 
-/* â”€â”€ Build-your-own toppings â”€â”€ */
 .toppings{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow-sm);padding:48px 44px;margin-top:18px}
 .top-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
 .top-col h4{font-family:'Cinzel',serif;color:var(--rose);font-size:1rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.top-col h4::before{content:"â¦";color:var(--gold)}
+.top-col h4::before{content:"\2766";color:var(--gold)}
 .chips{display:flex;flex-wrap:wrap;gap:9px}
 .chip{background:var(--blush-soft);color:var(--rose-deep);border:1px solid var(--line);border-radius:30px;padding:7px 15px;font-size:1rem;transition:.25s}
 .chip:hover{background:var(--blush);color:#fff;transform:translateY(-2px)}
 
-/* â”€â”€ Catering tiers â”€â”€ */
 .tier-block{margin-top:14px}
 .tier-label{font-family:'Cinzel',serif;text-transform:uppercase;letter-spacing:.2em;font-size:13px;color:var(--gold);text-align:center;margin:40px 0 22px;display:flex;align-items:center;justify-content:center;gap:16px}
 .tier-label::before,.tier-label::after{content:"";height:1px;width:50px;background:var(--gold-soft)}
@@ -199,21 +189,18 @@ header.scrolled .brand{font-size:1.8rem}
 .tier .price{color:var(--gold);font-size:1.7rem;font-weight:600}
 .tier .price .per{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 
-/* â”€â”€ Occasions â”€â”€ */
 .occ-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:8px}
 .occ{text-align:center}
 .occ .badge{width:88px;height:88px;margin:0 auto 14px;border-radius:50%;background:var(--blush-soft);border:2px solid var(--gold-soft);display:flex;align-items:center;justify-content:center;font-size:2rem;transition:.35s;box-shadow:var(--shadow-sm)}
 .occ:hover .badge{background:var(--blush);transform:translateY(-6px) scale(1.04)}
 .occ p{font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose-deep)}
 
-/* â”€â”€ Gallery â”€â”€ */
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;margin-top:18px}
 .gallery .g{border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
 .gallery .g img{width:100%;height:100%;object-fit:cover;transition:.6s}
 .gallery .g:hover img{transform:scale(1.07)}
 .gallery .tall{grid-row:span 2}
 
-/* â”€â”€ CTA band (on solid bg, accent on the card/button only) â”€â”€ */
 .cta-card{background:var(--card);border:1px solid var(--gold-soft);border-radius:28px;box-shadow:var(--shadow);padding:64px 40px;text-align:center;position:relative;overflow:hidden}
 .cta-card .script{font-size:clamp(2.4rem,6vw,4rem);color:var(--gold);line-height:1}
 .cta-card h2{color:var(--rose);font-size:clamp(1.6rem,3.4vw,2.3rem);margin-top:6px}
@@ -221,7 +208,6 @@ header.scrolled .brand{font-size:1.8rem}
 .cta-card .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .note{margin-top:24px;font-size:.98rem;color:var(--muted);letter-spacing:.02em}
 
-/* â”€â”€ Contact â”€â”€ */
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:18px}
 .c-item{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 26px;text-align:center;box-shadow:var(--shadow-sm);transition:.3s}
 .c-item:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
@@ -230,7 +216,6 @@ header.scrolled .brand{font-size:1.8rem}
 .c-item a,.c-item span{color:var(--text);font-size:1.18rem}
 .c-item a:hover{color:var(--rose)}
 
-/* â”€â”€ Footer â”€â”€ */
 footer{background:var(--deep);color:#e9d6cf;padding:72px 0 30px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;align-items:start}
 footer .brand{color:var(--gold-soft)}
@@ -247,7 +232,6 @@ footer ul li a:hover{color:#fff}
 .foot-bottom{border-top:1px solid rgba(234,180,192,.18);margin-top:48px;padding-top:24px;text-align:center;font-size:.95rem;color:#bfa49d}
 .foot-bottom .script{color:var(--gold-soft);font-size:1.5rem}
 
-/* â”€â”€ Reveal â”€â”€ */
 .reveal{opacity:0;transform:translateY(34px);transition:.8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .stagger>*{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
@@ -258,10 +242,8 @@ footer ul li a:hover{color:#fff}
 .stagger.in>*:nth-child(5){transition-delay:.32s}
 .stagger.in>*:nth-child(6){transition-delay:.4s}
 
-/* â”€â”€ Mobile sticky book â”€â”€ */
 .mobile-book{display:none}
 
-/* â”€â”€ Responsive â”€â”€ */
 @media(max-width:980px){
   .pillars{grid-template-columns:repeat(2,1fr)}
   .menu-grid{grid-template-columns:1fr}
@@ -295,7 +277,7 @@ footer ul li a:hover{color:#fff}
 </head>
 <body>
 
-<!-- â•â•â•â•â•â• HEADER â•â•â•â•â•â• -->
+<!-- HEADER -->
 <header id="hdr">
   <div class="wrap nav">
     <a href="#top" class="brand">A Savory Affair<small>Mobile Snack Bar</small></a>
@@ -306,17 +288,17 @@ footer ul li a:hover{color:#fff}
       <a class="lk" href="#contact">Contact</a>
       <a class="btn btn-primary" href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener">Book Your Event</a>
     </nav>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">â˜°</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
   </div>
 </header>
 
 <a id="top"></a>
 
-<!-- â•â•â•â•â•â• HERO â•â•â•â•â•â• -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <!-- REPLACE WITH REAL PHOTO: signature charcuterie / dessert spread -->
-    <img src="https://images.unsplash.com/photo-1452251889946-8ff5ea7b27ab?auto=format&fit=crop&w=1600&q=80" alt="Luxe charcuterie and dessert grazing spread" />
+    <!-- REPLACE WITH REAL PHOTO: signature grazing table / dessert spread -->
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Luxe charcuterie and dessert grazing spread" />
   </div>
   <div class="wrap">
     <div class="hero-inner reveal">
@@ -326,54 +308,53 @@ footer ul li a:hover{color:#fff}
       <p class="lede">Sweet. Savory. Unforgettable. We bring a beautifully curated grazing experience straight to your celebration.</p>
       <p class="area">Serving South Elgin &amp; the greater Fox Valley, IL</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener">Book Your Event â™¡</a>
+        <a class="btn btn-primary" href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener">Book Your Event &#9825;</a>
         <a class="btn btn-ghost" href="tel:7089971824">Call 708.997.1824</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• ABOUT + PILLARS â•â•â•â•â•â• -->
+<!-- ABOUT + PILLARS -->
 <section id="about">
   <div class="wrap">
     <div class="about-grid">
       <div class="about-copy reveal">
         <p class="eyebrow">We bring the sweetness to you</p>
-        <div class="divider"><span>â¦</span></div>
+        <div class="divider"><span>&#10086;</span></div>
         <h2>Where elegance meets the art of grazing</h2>
-        <p>Our mobile snack cart is the perfect addition to any celebration â€” serving up beautifully crafted, delicious treats your guests will love. Every setup is made with love, premium ingredients, and a little bit of magic.</p>
+        <p>Our mobile snack cart is the perfect addition to any celebration &mdash; serving up beautifully crafted, delicious treats your guests will love. Every setup is made with love, premium ingredients, and a little bit of magic.</p>
         <p>From an interactive frozen banana bar to a luxe charcuterie spread, we tailor each affair to match your theme, your colors, and your vision.</p>
       </div>
       <div class="about-photo reveal photo-ph">
         <!-- REPLACE WITH REAL PHOTO: the styled cart / setup -->
-        <span class="cam">ðŸ“·</span>
+        <span class="cam">&#128247;</span>
         <small>Your Snack Cart Setup</small>
       </div>
     </div>
 
     <div class="pillars stagger" style="margin-top:64px">
-      <div class="pillar"><div class="ic">ðŸšš</div><h3>We Come To You</h3><p>Our mobile cart brings the treats right to your location.</p></div>
-      <div class="pillar"><div class="ic">ðŸŒ¿</div><h3>Fresh &amp; Premium</h3><p>Made with love and high-quality ingredients, every time.</p></div>
-      <div class="pillar"><div class="ic">ðŸŽ€</div><h3>Customized</h3><p>We tailor our setup to match your theme and vision.</p></div>
-      <div class="pillar"><div class="ic">ðŸ’›</div><h3>Guests Love It</h3><p>A fun, interactive experience that leaves a lasting impression.</p></div>
+      <div class="pillar"><div class="ic">&#128666;</div><h3>We Come To You</h3><p>Our mobile cart brings the treats right to your location.</p></div>
+      <div class="pillar"><div class="ic">&#127807;</div><h3>Fresh &amp; Premium</h3><p>Made with love and high-quality ingredients, every time.</p></div>
+      <div class="pillar"><div class="ic">&#127872;</div><h3>Customized</h3><p>We tailor our setup to match your theme and vision.</p></div>
+      <div class="pillar"><div class="ic">&#128155;</div><h3>Guests Love It</h3><p>A fun, interactive experience that leaves a lasting impression.</p></div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• SNACK BAR MENU â•â•â•â•â•â• -->
+<!-- SNACK BAR MENU -->
 <section id="menu">
   <div class="wrap">
     <p class="eyebrow">The Mobile Snack Bar</p>
     <h2 class="sec-title">Sweet. Savory. Unforgettable.</h2>
-    <div class="divider"><span>â¦</span></div>
-    <p class="sec-sub">Choose your treats â€” every one is dressed up with your pick of premium toppings.</p>
+    <div class="divider"><span>&#10086;</span></div>
+    <p class="sec-sub">Choose your treats &mdash; every one is dressed up with your pick of premium toppings.</p>
 
     <div class="menu-grid" style="margin-top:46px">
-      <!-- Mini Pancakes -->
       <article class="m-card reveal">
         <div class="m-photo photo-ph" style="aspect-ratio:16/10">
           <!-- REPLACE WITH REAL PHOTO: mini pancakes with berries -->
-          <span class="cam">ðŸ“·</span><small>Mini Pancakes</small>
+          <span class="cam">&#128247;</span><small>Mini Pancakes</small>
         </div>
         <div class="m-body">
           <div class="m-head"><h3>Mini Pancakes</h3><span class="m-price">$8</span></div>
@@ -383,60 +364,55 @@ footer ul li a:hover{color:#fff}
         </div>
       </article>
 
-      <!-- Frozen Bananas -->
       <article class="m-card reveal">
         <div class="m-photo photo-ph" style="aspect-ratio:16/10">
           <!-- REPLACE WITH REAL PHOTO: chocolate-dipped frozen bananas -->
-          <span class="cam">ðŸ“·</span><small>Frozen Bananas</small>
+          <span class="cam">&#128247;</span><small>Frozen Bananas</small>
         </div>
         <div class="m-body">
           <div class="m-head"><h3>Frozen Bananas</h3><span class="m-price custom">Most Loved</span></div>
           <p class="desc">A cool, chocolatey treat dipped in white or milk chocolate with your choice of toppings &amp; drizzle.</p>
-          <p class="m-extra"><b>Full Bananas</b> $7 &nbsp;Â·&nbsp; <b>Mini Bananas</b> $3.50 each</p>
+          <p class="m-extra"><b>Full Bananas</b> $7 &nbsp;&middot;&nbsp; <b>Mini Bananas</b> $3.50 each</p>
         </div>
       </article>
 
-      <!-- Charcuterie Bar -->
       <article class="m-card reveal">
         <div class="m-photo photo-ph" style="aspect-ratio:16/10">
           <!-- REPLACE WITH REAL PHOTO: individual charcuterie cups -->
-          <span class="cam">ðŸ“·</span><small>Charcuterie Bar</small>
+          <span class="cam">&#128247;</span><small>Charcuterie Bar</small>
         </div>
         <div class="m-body">
           <div class="m-head"><h3>Charcuterie Bar</h3><span class="m-price custom">Custom Pricing</span></div>
-          <p class="desc">Individual servings for guests â€” thoughtfully curated with premium meats, cheeses, fruits, nuts, and crackers for a luxury and delightful experience.</p>
+          <p class="desc">Individual servings for guests &mdash; thoughtfully curated with premium meats, cheeses, fruits, nuts, and crackers for a luxury and delightful experience.</p>
         </div>
       </article>
 
-      <!-- S'mores Bar -->
       <article class="m-card reveal">
         <div class="m-photo photo-ph" style="aspect-ratio:16/10">
           <!-- REPLACE WITH REAL PHOTO: s'mores bar spread -->
-          <span class="cam">ðŸ“·</span><small>S'mores Bar</small>
+          <span class="cam">&#128247;</span><small>S'mores Bar</small>
         </div>
         <div class="m-body">
           <div class="m-head"><h3>S'mores Bar</h3><span class="m-price">$6<span style="font-size:.6em;letter-spacing:.04em"> /person</span></span></div>
-          <p class="desc">All the fixings for the perfect s'more â€” customizable &amp; fun for guests of every age.</p>
+          <p class="desc">All the fixings for the perfect s'more &mdash; customizable &amp; fun for guests of every age.</p>
         </div>
       </article>
 
-      <!-- Cannoli Bar -->
       <article class="m-card reveal">
         <div class="m-photo photo-ph" style="aspect-ratio:16/10">
           <!-- REPLACE WITH REAL PHOTO: filled cannoli tray -->
-          <span class="cam">ðŸ“·</span><small>Cannoli Bar</small>
+          <span class="cam">&#128247;</span><small>Cannoli Bar</small>
         </div>
         <div class="m-body">
           <div class="m-head"><h3>Cannoli Bar</h3><span class="m-price custom">Custom Pricing</span></div>
-          <p class="desc">Crisp shells filled with rich, creamy goodness â€” customize with your favorite toppings.</p>
+          <p class="desc">Crisp shells filled with rich, creamy goodness &mdash; customize with your favorite toppings.</p>
         </div>
       </article>
 
-      <!-- Mini Cakes -->
       <article class="m-card reveal">
         <div class="m-photo photo-ph" style="aspect-ratio:16/10">
           <!-- REPLACE WITH REAL PHOTO: frosted mini loaf cakes -->
-          <span class="cam">ðŸ“·</span><small>Mini Cakes</small>
+          <span class="cam">&#128247;</span><small>Mini Cakes</small>
         </div>
         <div class="m-body">
           <div class="m-head"><h3>Mini Cakes</h3><span class="m-price">$5<span style="font-size:.6em;letter-spacing:.04em"> each</span></span></div>
@@ -447,13 +423,13 @@ footer ul li a:hover{color:#fff}
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• BUILD YOUR FROZEN BANANA â•â•â•â•â•â• -->
+<!-- BUILD YOUR FROZEN BANANA -->
 <section id="bananas" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow">Our Signature</p>
     <h2 class="sec-title">Build Your Frozen Banana</h2>
-    <div class="divider"><span>â¦</span></div>
-    <p class="sec-sub">Dipped in white or milk chocolate â€” then make it yours.</p>
+    <div class="divider"><span>&#10086;</span></div>
+    <p class="sec-sub">Dipped in white or milk chocolate &mdash; then make it yours.</p>
 
     <div class="toppings reveal" style="margin-top:40px">
       <div class="top-cols">
@@ -485,73 +461,73 @@ footer ul li a:hover{color:#fff}
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• CHARCUTERIE & CATERING â•â•â•â•â•â• -->
+<!-- CHARCUTERIE & CATERING -->
 <section id="catering">
   <div class="wrap">
     <p class="eyebrow">Mobile Charcuterie Bar</p>
     <h2 class="sec-title">Charcuterie &amp; Catering</h2>
-    <div class="divider"><span>â¦</span></div>
+    <div class="divider"><span>&#10086;</span></div>
     <p class="sec-sub">Grazing tables, bar set-ups, and curated platters for every guest count.</p>
 
     <div class="tier-block">
       <div class="tier-label">Bar Set-Up Options</div>
       <div class="tier-grid stagger">
-        <div class="tier"><h4>Small Bar</h4><p class="serves">Serves 20â€“40 people</p><p class="price">$400<span style="font-size:.7em">+</span></p></div>
-        <div class="tier"><h4>Medium Bar</h4><p class="serves">Serves 50â€“75 people</p><p class="price">$600<span style="font-size:.7em">+</span></p></div>
-        <div class="tier"><h4>Large Bar</h4><p class="serves">Serves 80â€“100 people</p><p class="price">$800<span style="font-size:.7em">+</span></p></div>
+        <div class="tier"><h4>Small Bar</h4><p class="serves">Serves 20&ndash;40 people</p><p class="price">$400<span style="font-size:.7em">+</span></p></div>
+        <div class="tier"><h4>Medium Bar</h4><p class="serves">Serves 50&ndash;75 people</p><p class="price">$600<span style="font-size:.7em">+</span></p></div>
+        <div class="tier"><h4>Large Bar</h4><p class="serves">Serves 80&ndash;100 people</p><p class="price">$800<span style="font-size:.7em">+</span></p></div>
       </div>
 
       <div class="tier-label">Catering Platter Options</div>
       <div class="tier-grid platters stagger">
-        <div class="tier"><h4>Petite Platter</h4><p class="serves">Serves 4â€“6</p><p class="price">$75<span style="font-size:.7em">+</span></p></div>
-        <div class="tier"><h4>Petite Box</h4><p class="serves">Serves 8â€“12</p><p class="price">$150<span style="font-size:.7em">+</span></p></div>
-        <div class="tier"><h4>Signature Platter</h4><p class="serves">Serves 10â€“15</p><p class="price">$175<span style="font-size:.7em">+</span></p></div>
-        <div class="tier"><h4>Deluxe Platter</h4><p class="serves">Serves 15â€“20</p><p class="price">$250<span style="font-size:.7em">+</span></p></div>
+        <div class="tier"><h4>Petite Platter</h4><p class="serves">Serves 4&ndash;6</p><p class="price">$75<span style="font-size:.7em">+</span></p></div>
+        <div class="tier"><h4>Petite Box</h4><p class="serves">Serves 8&ndash;12</p><p class="price">$150<span style="font-size:.7em">+</span></p></div>
+        <div class="tier"><h4>Signature Platter</h4><p class="serves">Serves 10&ndash;15</p><p class="price">$175<span style="font-size:.7em">+</span></p></div>
+        <div class="tier"><h4>Deluxe Platter</h4><p class="serves">Serves 15&ndash;20</p><p class="price">$250<span style="font-size:.7em">+</span></p></div>
         <div class="tier"><h4>Grand Platter</h4><p class="serves">Serves 25+</p><p class="price">$350<span style="font-size:.7em">+</span></p></div>
         <div class="tier"><h4>Grazing Table</h4><p class="serves">30+ people</p><p class="price">$20<span class="per"> /person</span></p></div>
       </div>
-      <p class="note" style="text-align:center">âœ¶ Orders require a 72-hour minimum notice. Bar set-ups &amp; platters customized to your event.</p>
+      <p class="note" style="text-align:center">&#10038; Orders require a 72-hour minimum notice. Bar set-ups &amp; platters customized to your event.</p>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• OCCASIONS â•â•â•â•â•â• -->
+<!-- OCCASIONS -->
 <section id="occasions">
   <div class="wrap">
     <p class="eyebrow">Perfect For Every Occasion</p>
     <h2 class="sec-title">Let's Make It Extra Sweet</h2>
-    <div class="divider"><span>â¦</span></div>
+    <div class="divider"><span>&#10086;</span></div>
 
     <div class="occ-grid stagger" style="margin-top:46px">
-      <div class="occ"><div class="badge">ðŸ’</div><p>Bridal Showers</p></div>
-      <div class="occ"><div class="badge">ðŸ¼</div><p>Baby Showers</p></div>
-      <div class="occ"><div class="badge">ðŸ’’</div><p>Weddings</p></div>
-      <div class="occ"><div class="badge">ðŸ¥‚</div><p>Receptions</p></div>
-      <div class="occ"><div class="badge">ðŸŽ“</div><p>Graduations</p></div>
-      <div class="occ"><div class="badge">ðŸŽ‰</div><p>&amp; More!</p></div>
+      <div class="occ"><div class="badge">&#128141;</div><p>Bridal Showers</p></div>
+      <div class="occ"><div class="badge">&#127868;</div><p>Baby Showers</p></div>
+      <div class="occ"><div class="badge">&#128144;</div><p>Weddings</p></div>
+      <div class="occ"><div class="badge">&#129346;</div><p>Receptions</p></div>
+      <div class="occ"><div class="badge">&#127891;</div><p>Graduations</p></div>
+      <div class="occ"><div class="badge">&#127881;</div><p>&amp; More!</p></div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• GALLERY â•â•â•â•â•â• -->
+<!-- GALLERY -->
 <section id="gallery" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow">A Little Taste</p>
     <h2 class="sec-title">The Spread</h2>
-    <div class="divider"><span>â¦</span></div>
+    <div class="divider"><span>&#10086;</span></div>
     <div class="gallery reveal" style="margin-top:30px">
-      <div class="g tall photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">ðŸ“·</span><small>Grazing Table</small></div>
-      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">ðŸ“·</span><small>Frozen Bananas</small></div>
-      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">ðŸ“·</span><small>Cannoli Bar</small></div>
-      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">ðŸ“·</span><small>Mini Pancakes</small></div>
-      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">ðŸ“·</span><small>S'mores Bar</small></div>
-      <div class="g tall photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">ðŸ“·</span><small>The Cart</small></div>
-      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">ðŸ“·</span><small>Charcuterie Cups</small></div>
+      <div class="g tall photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">&#128247;</span><small>Grazing Table</small></div>
+      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">&#128247;</span><small>Frozen Bananas</small></div>
+      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">&#128247;</span><small>Cannoli Bar</small></div>
+      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">&#128247;</span><small>Mini Pancakes</small></div>
+      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">&#128247;</span><small>S'mores Bar</small></div>
+      <div class="g tall photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">&#128247;</span><small>The Cart</small></div>
+      <div class="g photo-ph"><!-- REPLACE WITH REAL PHOTO --><span class="cam">&#128247;</span><small>Charcuterie Cups</small></div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• CTA â•â•â•â•â•â• -->
+<!-- CTA -->
 <section id="book">
   <div class="wrap">
     <div class="cta-card reveal">
@@ -559,26 +535,26 @@ footer ul li a:hover{color:#fff}
       <h2>Book Today</h2>
       <p>Tell us about your celebration and we'll bring the grazing table to you. Sweet, savory, and unforgettable.</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener">Book Your Event â™¡</a>
+        <a class="btn btn-primary" href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener">Book Your Event &#9825;</a>
         <a class="btn btn-ghost" href="tel:7089971824">Call 708.997.1824</a>
       </div>
-      <p class="note">âœ¶ Orders require a 72-hour minimum notice</p>
+      <p class="note">&#10038; Orders require a 72-hour minimum notice</p>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• CONTACT â•â•â•â•â•â• -->
+<!-- CONTACT -->
 <section id="contact" style="padding-top:0">
   <div class="wrap">
     <div class="contact-grid stagger">
-      <div class="c-item"><div class="ic">ðŸ“ž</div><h4>Call or Text</h4><a href="tel:7089971824">708.997.1824</a></div>
-      <div class="c-item"><div class="ic">âœ‰ï¸</div><h4>Email</h4><a href="mailto:asavoryaffair26@gmail.com">asavoryaffair26@gmail.com</a></div>
-      <div class="c-item"><div class="ic">ðŸ“</div><h4>Service Area</h4><span>South Elgin &amp; the Fox Valley, IL</span></div>
+      <div class="c-item"><div class="ic">&#128222;</div><h4>Call or Text</h4><a href="tel:7089971824">708.997.1824</a></div>
+      <div class="c-item"><div class="ic">&#9993;</div><h4>Email</h4><a href="mailto:asavoryaffair26@gmail.com">asavoryaffair26@gmail.com</a></div>
+      <div class="c-item"><div class="ic">&#128205;</div><h4>Service Area</h4><span>South Elgin &amp; the Fox Valley, IL</span></div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â• FOOTER â•â•â•â•â•â• -->
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -587,7 +563,7 @@ footer ul li a:hover{color:#fff}
         <p>Luxe mobile charcuterie &amp; dessert catering. We bring beautifully crafted treats to weddings, showers, and celebrations across the Fox Valley.</p>
         <div class="socials">
           <a href="https://www.facebook.com/people/A-Savory-Affair/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener" aria-label="Book">â™¡</a>
+          <a href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener" aria-label="Book">&#9825;</a>
         </div>
       </div>
       <div>
@@ -611,28 +587,24 @@ footer ul li a:hover{color:#fff}
     </div>
     <div class="foot-bottom">
       <p class="script">A Savory Affair</p>
-      <p>&copy; <span id="yr"></span> A Savory Affair Â· Sweet. Savory. Unforgettable.</p>
+      <p>&copy; <span id="yr"></span> A Savory Affair &middot; Sweet. Savory. Unforgettable.</p>
     </div>
   </div>
 </footer>
 
-<!-- â•â•â•â•â•â• MOBILE STICKY BOOK â•â•â•â•â•â• -->
+<!-- MOBILE STICKY BOOK -->
 <div class="mobile-book">
-  <a class="btn btn-primary" href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener">Book Your Event â™¡</a>
+  <a class="btn btn-primary" href="https://calendly.com/asavoryaffair26" target="_blank" rel="noopener">Book Your Event &#9825;</a>
 </div>
 
 <script>
-// Header scroll state
 const hdr=document.getElementById('hdr');
 addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
-// Mobile nav
 const tg=document.getElementById('menuToggle'),nl=document.getElementById('navLinks');
 tg.addEventListener('click',()=>nl.classList.toggle('open'));
 nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
-// Reveal on scroll
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
 document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
-// Year
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
 <!-- ===========================================================================
@@ -754,7 +726,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
     { id: 'jost',                family: 'Jost',                    label: 'Jost' }
   ];
 
-  // Load a Google Font on demand (idempotent â€” already-loaded fonts no-op).
+  // Load a Google Font on demand (idempotent — already-loaded fonts no-op).
   var loadedFonts = {};
   function loadFont(family) {
     if (!family || loadedFonts[family]) return;
@@ -917,8 +889,8 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   // ====================================================================
   // Click the "BG" button in toolbar to enter background-picker mode.
   // Cursor becomes a crosshair. Hover any element with a non-transparent
-  // background and it gets a yellow outline. Click â†’ small color picker
-  // popover opens anchored to that element. Pick a color â†’ applied as
+  // background and it gets a yellow outline. Click → small color picker
+  // popover opens anchored to that element. Pick a color → applied as
   // inline `background-color` style. Escape or BG button again exits.
   //
   // Why walk UP the DOM: when user clicks a small element (a button label,
@@ -1099,24 +1071,24 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   // ---------- drop-logo-to-rebrand (v3.1) -----------------------------
   // ====================================================================
   //
-  // CRITICAL DESIGN RULE â€” THE LOGO MUST FLOW WITH THE WEBSITE.
+  // CRITICAL DESIGN RULE — THE LOGO MUST FLOW WITH THE WEBSITE.
   // ============================================================
   // The dropped logo should NEVER look like a foreign sticker pasted on
   // top of the site. The logo's artwork (typography, brushwork, icons)
-  // should appear to sit DIRECTLY ON the website background â€” as if it
+  // should appear to sit DIRECTLY ON the website background — as if it
   // were printed signage, not a JPEG dropped on a page.
   //
   // What this means in practice:
   //   1. The logo's solid background (most logos come on white or black)
   //      MUST be visually removed before display. We do this with CSS
   //      mix-blend-mode:
-  //        - dark sites  â†’ `mix-blend-mode: screen`   (drops black bg)
-  //        - light sites â†’ `mix-blend-mode: multiply` (drops white bg)
+  //        - dark sites  → `mix-blend-mode: screen`   (drops black bg)
+  //        - light sites → `mix-blend-mode: multiply` (drops white bg)
   //      Picked automatically based on site body background luminance.
   //   2. NEVER apply border-radius: 50% to the logo. That makes it look
   //      like a social-media profile avatar, not a brand mark. The logo
-  //      is signage â€” square / natural aspect ratio, no clip mask.
-  //   3. The container around the <img> should be transparent â€” no
+  //      is signage — square / natural aspect ratio, no clip mask.
+  //   3. The container around the <img> should be transparent — no
   //      background-color, no border, no shadow. Let the logo's own
   //      artwork carry visual weight via contrast/brightness filters.
   //   4. Make sure the IMAGE FILE itself sits on the same background as
@@ -1125,7 +1097,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   //      else around it.
   //
   // This is the same rule from CLAUDE.md "NEVER frame the logo in a circle"
-  // and "LOGO IS THE CENTER OF ATTENTION" â€” enforced in code so the
+  // and "LOGO IS THE CENTER OF ATTENTION" — enforced in code so the
   // dropped logo automatically flows with the site, never overrides it.
   //
   // ====================================================================
@@ -1137,13 +1109,13 @@ document.getElementById('yr').textContent=new Date().getFullYear();
     modal.id = 'jb-modal';
     modal.innerHTML = [
       '<div class="jb-modal-card" style="max-width:560px">',
-      '  <h3>Drop logo â†’ rebrand the site</h3>',
-      '  <p style="margin-bottom:14px">Drop the company\'s logo here. The site will adopt its colors and the logo will be placed in the header + footer (with its background visually dropped so it blends with the page â€” never as a sticker).</p>',
+      '  <h3>Drop logo → rebrand the site</h3>',
+      '  <p style="margin-bottom:14px">Drop the company\'s logo here. The site will adopt its colors and the logo will be placed in the header + footer (with its background visually dropped so it blends with the page — never as a sticker).</p>',
       '  <label id="jb-logo-drop" style="display:block;border:3px dashed #f59e0b;border-radius:10px;padding:32px 18px;text-align:center;cursor:pointer;background:#1a1408;transition:all 0.15s">',
       '    <input id="jb-logo-file" type="file" accept="image/*" style="display:none" />',
-      '    <div style="font-size:42px;line-height:1;margin-bottom:10px">ðŸŽ¨</div>',
+      '    <div style="font-size:42px;line-height:1;margin-bottom:10px">🎨</div>',
       '    <div style="font-size:16px;font-weight:600;color:#fbbf24;margin-bottom:6px">Tap or drop your logo</div>',
-      '    <div style="font-size:12px;color:#94a3b8">PNG, JPG, or SVG. Transparent or solid background â€” both work.</div>',
+      '    <div style="font-size:12px;color:#94a3b8">PNG, JPG, or SVG. Transparent or solid background — both work.</div>',
       '  </label>',
       '  <div id="jb-logo-result" style="display:none;margin-top:16px"></div>',
       '  <div class="jb-modal-actions">',
@@ -1209,7 +1181,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
       catch (e) { alert('Could not read pixels (cross-origin?). Try a different image.'); return; }
 
       // Determine if the LOGO ITSELF is on a dark or light background
-      // by sampling the 4 corners â€” these are nearly always the logo's
+      // by sampling the 4 corners — these are nearly always the logo's
       // background pad.
       var corners = [
         [0, 0], [canvas.width - 1, 0], [0, canvas.height - 1], [canvas.width - 1, canvas.height - 1]
@@ -1271,8 +1243,8 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 
   function renderLogoPreview(container, dataUrl, palette, bgIsDark) {
     var blendNote = bgIsDark
-      ? 'Logo will use `mix-blend-mode: screen` to drop its black background â€” only the artwork floats on the page.'
-      : 'Logo will use `mix-blend-mode: multiply` to drop its white background â€” only the artwork sits on the page.';
+      ? 'Logo will use `mix-blend-mode: screen` to drop its black background — only the artwork floats on the page.'
+      : 'Logo will use `mix-blend-mode: multiply` to drop its white background — only the artwork sits on the page.';
     var blendMode = bgIsDark ? 'screen' : 'multiply';
     var previewBg = bgIsDark ? '#0a0e1a' : '#fff';
     var html = [
@@ -1373,10 +1345,10 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 
   function applyPaletteToVars(palette) {
     if (!palette.length) return;
-    // Most-saturated color (highest chroma) â†’ --accent
+    // Most-saturated color (highest chroma) → --accent
     var byChroma = palette.slice().sort(function (a, b) { return b.chroma - a.chroma; });
     var accent = byChroma[0];
-    // Darkest color â†’ --primary  (lowest luminance)
+    // Darkest color → --primary  (lowest luminance)
     var byLum = palette.slice().sort(function (a, b) {
       var la = a.r * 0.299 + a.g * 0.587 + a.b * 0.114;
       var lb = b.r * 0.299 + b.g * 0.587 + b.b * 0.114;
@@ -1406,7 +1378,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
     elemPanel.innerHTML = [
       '<div class="jb-elem-head">',
       '  <span class="jb-elem-title">Element Style</span>',
-      '  <button class="jb-elem-close" aria-label="Close">Ã—</button>',
+      '  <button class="jb-elem-close" aria-label="Close">×</button>',
       '</div>',
       '<div class="jb-elem-target" id="jb-elem-target">No element selected</div>',
       '<div class="jb-elem-row">',
@@ -1656,7 +1628,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
       '  <h3>Replace image</h3>',
       '  <label id="jb-drop" style="display:block;border:3px dashed #f59e0b;border-radius:10px;padding:32px 18px;text-align:center;cursor:pointer;background:#1a1408;transition:all 0.15s">',
       '    <input id="jb-file" type="file" accept="image/*" style="display:none" />',
-      '    <div style="font-size:42px;line-height:1;margin-bottom:10px">ðŸ“·</div>',
+      '    <div style="font-size:42px;line-height:1;margin-bottom:10px">📷</div>',
       '    <div style="font-size:16px;font-weight:600;color:#fbbf24;margin-bottom:6px">Tap to pick a photo</div>',
       '    <div style="font-size:12px;color:#94a3b8">from your camera roll, files, or drag & drop here</div>',
       '  </label>',
@@ -1742,7 +1714,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
       btn.className = 'jb-del-btn';
       btn.title = 'Hide this (click trash again to restore)';
       btn.setAttribute('aria-label', 'Hide this element');
-      btn.textContent = 'Ã—';
+      btn.textContent = '×';
       btn.addEventListener('click', function (e) {
         e.preventDefault(); e.stopPropagation();
         toggleHidden(el);
@@ -1781,7 +1753,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   function buildStyleDrawer() {
     styleDrawer = document.createElement('div');
     styleDrawer.className = 'jb-drawer';
-    var html = ['<button class="jb-drawer-close" aria-label="Close">Ã—</button>'];
+    var html = ['<button class="jb-drawer-close" aria-label="Close">×</button>'];
     html.push('<h3>Colors</h3>');
     html.push('<div id="jb-colors-list"></div>');
     html.push('<h4>Fonts (whole site)</h4>');
@@ -1923,7 +1895,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   function buildSectionDrawer() {
     sectionDrawer = document.createElement('div');
     sectionDrawer.className = 'jb-drawer';
-    sectionDrawer.innerHTML = '<button class="jb-drawer-close" aria-label="Close">Ã—</button><h3>Sections on this page</h3><div id="jb-section-list"></div>';
+    sectionDrawer.innerHTML = '<button class="jb-drawer-close" aria-label="Close">×</button><h3>Sections on this page</h3><div id="jb-section-list"></div>';
     document.body.appendChild(sectionDrawer);
     sectionDrawer.querySelector('.jb-drawer-close').onclick = closeAllDrawers;
   }
@@ -1936,7 +1908,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
       var hidden = sec.hasAttribute('data-jb-hidden');
       var row = document.createElement('div');
       row.className = 'jb-section-row' + (hidden ? ' hidden' : '');
-      row.innerHTML = '<span class="jb-section-name">' + name + '</span><button class="jb-section-eye" title="Toggle visibility">' + (hidden ? 'â˜“' : 'âœ•') + '</button>';
+      row.innerHTML = '<span class="jb-section-name">' + name + '</span><button class="jb-section-eye" title="Toggle visibility">' + (hidden ? '☓' : '✕') + '</button>';
       row.querySelector('.jb-section-name').addEventListener('click', function () {
         sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
         closeAllDrawers();
@@ -2081,7 +2053,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
       return attemptSave(1).then(function () {
         status('Vercel deploying...');
         toast('Saved! Vercel redeploys in ~15s. Refresh to see live.');
-        btn.textContent = 'Saved âœ“';
+        btn.textContent = 'Saved ✓';
         setTimeout(function () { btn.textContent = 'Save'; btn.disabled = false; status('click text, image, or trash icon'); }, 4000);
       }).catch(function (err) {
         if (/401|403/.test(err.message)) { clearStoredToken(); toast('Token rejected -- click Save again to enter a new one.', true); }
