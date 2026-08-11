@@ -1452,11 +1452,27 @@ function buildSitemap() {
 
 /* ---------- write ---------- */
 
+/* Output dir: defaults to this folder (pages sit next to the source, and get
+   committed). Pass a dir to build elsewhere - Vercel uses `node build-site.js dist`
+   and serves dist/, so only the generator and assets need to be deployed. */
+const OUT = process.argv[2] ? path.resolve(ROOT, process.argv[2]) : ROOT;
+
 function write(rel, content) {
-  const full = path.join(ROOT, rel);
+  const full = path.join(OUT, rel);
   fs.mkdirSync(path.dirname(full), { recursive: true });
   fs.writeFileSync(full, content, 'utf8');
   console.log('  wrote ' + rel);
+}
+
+function copyAssets() {
+  if (OUT === ROOT) return;
+  const src = path.join(ROOT, 'assets');
+  const dst = path.join(OUT, 'assets');
+  fs.mkdirSync(dst, { recursive: true });
+  for (const f of fs.readdirSync(src)) {
+    fs.copyFileSync(path.join(src, f), path.join(dst, f));
+    console.log('  copied assets/' + f);
+  }
 }
 
 console.log('Building Rizzuto Outreach...');
@@ -1467,4 +1483,5 @@ write('locations/index.html', buildLocationsHub());
 TOWNS.forEach((t) => write('locations/' + t.slug + '.html', buildLocation(t)));
 write('sitemap.xml', buildSitemap());
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
-console.log(`Done. ${2 + SERVICES.length + 1 + TOWNS.length} pages.`);
+copyAssets();
+console.log(`Done. ${2 + SERVICES.length + 1 + TOWNS.length} pages -> ${OUT}`);
