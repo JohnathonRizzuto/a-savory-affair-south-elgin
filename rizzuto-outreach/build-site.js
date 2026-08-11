@@ -255,6 +255,29 @@ const SERVICES = [
   }
 ];
 
+/* ---------- data: sample websites ---------- */
+
+const WORK = [
+  {
+    name: 'Platinum Construction Group',
+    tagline: 'General contracting &mdash; Batavia, IL',
+    url: 'https://theplatinumexteriors.com/',
+    shot: 'images/sample-platinum-construction-group.jpg',
+    alt: 'Hero section of the Platinum Construction Group website',
+    note:
+      'Full-service contractor covering half of Chicagoland. Video hero, a page for every service and every town they cover, and a quote form that tells them what the job is before they call back.'
+  },
+  {
+    name: 'R.B. Construction',
+    tagline: 'Carpentry &amp; framing &mdash; Sandwich, IL',
+    url: 'https://rb-construction-three.vercel.app/',
+    shot: 'images/sample-rb-construction.jpg',
+    alt: 'Hero section of the R.B. Construction website',
+    note:
+      'Framing and carpentry outfit working the Fox Valley. The hero puts four trades one tap away, and three of the builds come with a designer that draws the shed or garage on screen before anyone quotes it.'
+  }
+];
+
 /* ---------- data: towns ---------- */
 
 const TOWNS = [
@@ -439,10 +462,6 @@ function header(o) {
   return `
 <header class="hdr${o.solidHeader ? ' solid' : ''}" id="hdr">
   <div class="wrap hdr-in">
-    <a href="${b}index.html" class="logo" aria-label="Rizzuto Outreach home">
-      <b>Rizzuto <em>Outreach</em></b>
-      <span>Customized Modern Marketing</span>
-    </a>
     <nav class="nav" id="nav">
       <a href="${b}index.html"${on('home')}>Home</a>
 
@@ -471,10 +490,11 @@ ${TOWNS.map((t) => `          <a href="${b}locations/${t.slug}.html">${t.name}, 
         </div>
       </div>
 
+      <a href="${b}index.html#work">Our work</a>
       <a href="${b}index.html#why">Why us</a>
       <a href="${o.contactHref || '#contact'}">Contact</a>
-      <a href="${o.contactHref || '#contact'}" class="btn btn-primary hdr-cta"><span class="cta-full">Start a project</span><span class="cta-short">Contact</span> <span class="arw">&rarr;</span></a>
     </nav>
+    <a href="${o.contactHref || '#contact'}" class="btn btn-primary hdr-cta"><span class="cta-full">Start a project</span><span class="cta-short">Contact</span> <span class="arw">&rarr;</span></a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>`;
@@ -777,14 +797,39 @@ function buildHome() {
   <div class="float float-1"></div>
   <div class="float float-2"></div>
   <div class="wrap hero-in">
-    <h1 class="rise d1">Customized <em>modern</em> marketing.</h1>
-    <p class="lede rise d3">
+    <h1 class="rise d1">Rizzuto Outreach</h1>
+    <p class="hero-tag rise d2">Customized modern marketing.</p>
+    <p class="lede rise d3">Websites built for your business.</p>
+    <p class="hero-sub rise d4">
       Most local businesses lose customers before the first hello &mdash; a website that
       loads slow, a Google listing nobody sees, reviews that never get asked for.
       We fix the whole thing, built around your business. Not a template with your logo on it.
     </p>
   </div>
-  <a href="#services" class="scroll-cue rise d5" aria-label="Scroll to services">Our services<i></i></a>
+  <a href="#work" class="scroll-cue rise d5" aria-label="Scroll to our work">See our work<i></i></a>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Sample websites</p>
+      <h2>Two we <em>built</em>.</h2>
+      <p>Here's what the top of each one looks like. Click either to open the real site &mdash; both are live right now.</p>
+    </div>
+    <div class="work-grid">
+${WORK.map(
+  (w) => `      <a class="work-card reveal" href="${w.url}" target="_blank" rel="noopener">
+        <div class="work-shot"><img src="${w.shot}" alt="${w.alt}" width="1800" height="1125" loading="lazy" /></div>
+        <div class="work-body">
+          <span class="tagline">${w.tagline}</span>
+          <h3>${w.name}</h3>
+          <p>${w.note}</p>
+          <span class="work-link"><span>Visit the live site</span> <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>`
+).join('\n')}
+    </div>
+  </div>
 </section>
 
 <div class="marquee" aria-hidden="true">
@@ -1466,12 +1511,15 @@ function write(rel, content) {
 
 function copyAssets() {
   if (OUT === ROOT) return;
-  const src = path.join(ROOT, 'assets');
-  const dst = path.join(OUT, 'assets');
-  fs.mkdirSync(dst, { recursive: true });
-  for (const f of fs.readdirSync(src)) {
-    fs.copyFileSync(path.join(src, f), path.join(dst, f));
-    console.log('  copied assets/' + f);
+  for (const dir of ['assets', 'images']) {
+    const src = path.join(ROOT, dir);
+    if (!fs.existsSync(src)) continue;
+    const dst = path.join(OUT, dir);
+    fs.mkdirSync(dst, { recursive: true });
+    for (const f of fs.readdirSync(src)) {
+      fs.copyFileSync(path.join(src, f), path.join(dst, f));
+      console.log('  copied ' + dir + '/' + f);
+    }
   }
 }
 
