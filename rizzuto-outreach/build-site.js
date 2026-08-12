@@ -1521,6 +1521,17 @@ function copyAssets() {
       console.log('  copied ' + dir + '/' + f);
     }
   }
+  /* Loose files that sit at the site root. og-image.jpg is the link-preview
+     card every page points at, so it has to ship or shared links look bare. */
+  for (const f of ['og-image.jpg']) {
+    const src = path.join(ROOT, f);
+    if (!fs.existsSync(src)) {
+      console.log('  WARNING: ' + f + ' is missing - link previews will break');
+      continue;
+    }
+    fs.copyFileSync(src, path.join(OUT, f));
+    console.log('  copied ' + f);
+  }
 }
 
 console.log('Building Rizzuto Outreach...');
