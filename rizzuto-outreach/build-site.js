@@ -363,7 +363,7 @@ const TOWNS = [
       'Aurora is the biggest city in the area and easily the most competitive. Whatever you do, several other businesses do it too &mdash; and the ones winning are not necessarily better at the work, they are just easier to find.',
     localNote:
       'In a city this size, ranking city-wide is a long game, but ranking in your part of it is very winnable. We build around the neighbourhoods and services you actually want calls from instead of trying to own the whole map at once.',
-    nearby: ['batavia', 'geneva', 'st-charles', 'south-elgin', 'elgin']
+    nearby: ['batavia', 'geneva', 'plano', 'st-charles', 'south-elgin', 'elgin']
   },
   {
     slug: 'bartlett',
@@ -392,6 +392,20 @@ const TOWNS = [
     localNote:
       'Speed matters here more than polish. If your site takes six seconds on a phone, you have already lost the person. Fast pages, a listing with correct hours, and a number that is one tap away is most of the work in Streamwood.',
     nearby: ['bartlett', 'elgin', 'south-elgin', 'carpentersville', 'st-charles']
+  },
+  {
+    slug: 'plano',
+    name: 'Plano',
+    county: 'Kendall County, Illinois',
+    zip: '60545',
+    lat: 41.6628,
+    lng: -88.5370,
+    tag: 'Kendall County',
+    lede:
+      'Plano runs on people knowing people. That works right up until somebody new moves in off the Route 34 corridor, opens their phone, and picks whichever shop actually turns up &mdash; which, in a town this size, is usually whoever bothered to fill out their Google listing.',
+    localNote:
+      'Small towns are the easiest place to win local search and the most commonly ignored. There are fewer businesses competing for the same searches here than in Aurora or Elgin, so a listing that is properly filled out and a handful of recent reviews can put you at the top of the map in weeks rather than months. The catch is that Plano searches also pull in businesses from Sandwich, Yorkville and Oswego &mdash; so being the most visible option in your own town is not automatic.',
+    nearby: ['aurora', 'batavia', 'geneva', 'st-charles', 'south-elgin']
   },
   {
     slug: 'carpentersville',
