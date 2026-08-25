@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/initiatives.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/get-involved.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/events.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/about.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/sponsorship.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/sponsors.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/schedules.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/memberships.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/store.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/coaches-corner.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/contact.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
 </urlset>

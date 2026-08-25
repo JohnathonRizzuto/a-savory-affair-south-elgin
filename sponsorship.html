@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sponsorship Opportunities | Sandwich Sports Boosters</title>
+<title>Sponsorship | Sandwich Sports Boosters</title>
 <meta name="description" content="Put your business in front of the Sandwich community all season — sideline chair sponsorships, event banners, Elite Event Sponsor packages, and custom options." />
 <!-- GO-LIVE: update domain across canonical/OG/JSON-LD when the club's real domain points here -->
 <link rel="canonical" href="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/sponsorship.html" />
@@ -126,14 +126,14 @@ header.scrolled .brand img{width:38px;height:38px}
 .brand .bt{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.5rem;letter-spacing:.08em;color:var(--text);line-height:1}
 .brand .bt span{color:var(--accent)}
 .brand small{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.34em;color:var(--muted);text-transform:uppercase;margin-top:3px}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a.lk{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text);transition:.25s;position:relative;padding-bottom:2px}
+.nav-links{display:flex;align-items:center;gap:19px}
+.nav-links a.lk{font-size:11px;font-weight:700;letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;color:var(--text);transition:.25s;position:relative;padding-bottom:2px}
 .nav-links a.lk::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--accent);transition:.3s}
 .nav-links a.lk:hover{color:var(--accent-soft)}
 .nav-links a.lk:hover::after{width:100%}
 .nav-links a.lk.active{color:var(--accent)}
 .nav-links a.lk.active::after{width:100%}
-.nav-links .nav-cta{padding:12px 22px;font-size:11.5px;animation:none}
+.nav-links .nav-cta{padding:12px 18px;font-size:11px;animation:none;white-space:nowrap}
 .menu-toggle{display:none;background:none;border:none;color:var(--accent);font-size:1.8rem;cursor:pointer}
 
 /* page hero (subpages) */
@@ -331,6 +331,8 @@ footer ul li a:hover{color:var(--accent-soft)}
   .funded-grid,.sponsor-grid,.tier-grid,.contact-grid,.board-grid{grid-template-columns:1fr 1fr}
   .form-grid{grid-template-columns:1fr}
   .nav-links .nav-cta{display:none}
+  .nav-links{gap:15px}
+  .nav-links a.lk{font-size:10.5px;letter-spacing:.06em}
 }
 @media(max-width:680px){
   body{font-size:16px}
@@ -350,6 +352,23 @@ footer ul li a:hover{color:var(--accent-soft)}
   footer{padding-bottom:100px}
   .page-hero{padding:140px 0 64px}
 }
+
+/* ---- member portal handoff (links out to the club's existing system) ---- */
+.portal-card{
+  background:linear-gradient(160deg,rgba(255,122,26,.14),transparent 55%),var(--card);
+  border:1px solid rgba(255,122,26,.5);border-radius:20px;
+  padding:clamp(30px,4.5vw,54px);text-align:center;box-shadow:var(--shadow);
+  transition:.35s cubic-bezier(.16,1,.3,1);
+}
+.portal-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+.portal-card .p-tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#120a03;background:var(--accent);border-radius:30px;padding:6px 16px;margin-bottom:18px}
+.portal-card h3{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--text)}
+.portal-card p{color:var(--muted);max-width:560px;margin:14px auto 0}
+.portal-card .btn{margin-top:26px}
+.portal-note{color:var(--muted);font-size:.86rem;margin-top:16px;font-style:italic}
+.ext::after{content:"\2002\2197";font-weight:700}
+.two-up{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:780px){.two-up{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -364,12 +383,12 @@ footer ul li a:hover{color:var(--accent-soft)}
     </a>
     <nav class="nav-links" id="navLinks">
       <a class="lk" href="index.html">Home</a>
-      <a class="lk" href="initiatives.html">Our Impact</a>
-      <a class="lk" href="get-involved.html">Get Involved</a>
+      <a class="lk" href="events.html">Events</a>
+      <a class="lk" href="about.html">About Us</a>
       <a class="lk active" aria-current="page" href="sponsorship.html">Sponsorship</a>
-      <a class="lk" href="sponsors.html">Sponsors</a>
-      <a class="lk" href="schedules.html">Schedules</a>
-      <a class="lk" href="contact.html">Contact</a>
+      <a class="lk" href="memberships.html">Memberships</a>
+      <a class="lk" href="store.html">Store</a>
+      <a class="lk" href="coaches-corner.html">Coaches Corner</a>
       <a class="btn btn-primary nav-cta" href="sponsorship.html">Become a Sponsor</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
@@ -428,13 +447,39 @@ footer ul li a:hover{color:var(--accent-soft)}
   </div>
 </section>
 
-<!-- CURRENT SPONSORS TEASER -->
+<!-- CURRENT SPONSORS WALL -->
 <section class="band">
-  <div class="wrap" style="text-align:center">
-    <p class="eyebrow">You'd Be In Good Company</p>
-    <h2 class="sec-title">MEET THE <em>CURRENT SPONSORS</em></h2>
-    <p class="sec-sub">Local businesses and families already powering SHS athletics.</p>
-    <p style="margin-top:34px"><a class="btn btn-ghost" href="sponsors.html">See Our Sponsors</a></p>
+  <div class="wrap">
+    <p class="eyebrow">Powered By Local Business</p>
+    <h2 class="sec-title">OUR <em>SPONSORS</em></h2>
+    <p class="sec-sub">These businesses and families are why more than $115,000 has gone back into SHS athletics since 2023. Our sponsors mean everything to this organization.</p>
+    <!-- SPONSOR WALL: placeholder cards awaiting the club's full sponsor list.
+         Each card is swappable in the visual editor. DO NOT publish names without the club's list. -->
+    <div class="sponsor-grid stagger" style="margin-top:52px">
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <!-- REPLACE WITH REAL SPONSOR: logo + business name -->
+      <div class="sponsor-card"><div class="sponsor-logo photo-ph"><span class="cam">&#127991;</span><small>Sponsor Logo</small></div><h4>Sponsor Name</h4></div>
+      <div class="sponsor-card your-biz"><div class="big-plus">+</div><h4>YOUR BUSINESS HERE</h4><p>Join the wall &mdash; get seen all season.</p></div>
+    </div>
   </div>
 </section>
 
@@ -469,11 +514,12 @@ footer ul li a:hover{color:var(--accent-soft)}
       <div class="footer-col">
         <h5>Explore</h5>
         <ul>
-          <li><a href="initiatives.html">Where the Money Goes</a></li>
-          <li><a href="get-involved.html">Join a Committee</a></li>
-          <li><a href="sponsorship.html">Sponsorship Opportunities</a></li>
-          <li><a href="sponsors.html">Our Sponsors</a></li>
-          <li><a href="schedules.html">SHS Athletic Schedules</a></li>
+          <li><a href="events.html">Events &amp; Schedules</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sponsorship.html">Sponsorship</a></li>
+          <li><a href="memberships.html">Memberships</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="coaches-corner.html">Coaches Corner</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>

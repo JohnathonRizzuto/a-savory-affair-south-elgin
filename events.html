@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Where the Money Goes | Sandwich Sports Boosters</title>
-<meta name="description" content="Over $115,000 back into Sandwich High School athletics since 2023 — a $40,000 gym projector, wrestling mats, pitching machines, scholarships, and a sportsmanship award for every sport." />
+<title>Events & Schedules | Sandwich Sports Boosters</title>
+<meta name="description" content="Poker Night, the Block Party, and our Sandwich Fair booth — plus every SHS athletic schedule in one place: district calendars, IHSA, MaxPreps and NFHS Network." />
 <!-- GO-LIVE: update domain across canonical/OG/JSON-LD when the club's real domain points here -->
-<link rel="canonical" href="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/initiatives.html" />
+<link rel="canonical" href="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/events.html" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="theme-color" content="#0d0b09" />
 <meta name="geo.region" content="US-IL" />
@@ -14,9 +14,9 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/initiatives.html" />
-<meta property="og:title" content="Where the Money Goes | Sandwich Sports Boosters" />
-<meta property="og:description" content="$79,000+ invested in SHS athletics since May 2024. See every project the Boosters have funded." />
+<meta property="og:url" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/events.html" />
+<meta property="og:title" content="Events & Schedules | Sandwich Sports Boosters" />
+<meta property="og:description" content="Booster fundraisers and every Indians game day, all on one page." />
 <meta property="og:image" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/img/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -26,8 +26,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Where the Money Goes | Sandwich Sports Boosters" />
-<meta name="twitter:description" content="$79,000+ invested in SHS athletics since May 2024. See every project the Boosters have funded." />
+<meta name="twitter:title" content="Events & Schedules | Sandwich Sports Boosters" />
+<meta name="twitter:description" content="Booster fundraisers and every Indians game day, all on one page." />
 <meta name="twitter:image" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/img/og-image.jpg" />
 
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
@@ -126,14 +126,14 @@ header.scrolled .brand img{width:38px;height:38px}
 .brand .bt{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.5rem;letter-spacing:.08em;color:var(--text);line-height:1}
 .brand .bt span{color:var(--accent)}
 .brand small{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.34em;color:var(--muted);text-transform:uppercase;margin-top:3px}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a.lk{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text);transition:.25s;position:relative;padding-bottom:2px}
+.nav-links{display:flex;align-items:center;gap:19px}
+.nav-links a.lk{font-size:11px;font-weight:700;letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;color:var(--text);transition:.25s;position:relative;padding-bottom:2px}
 .nav-links a.lk::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--accent);transition:.3s}
 .nav-links a.lk:hover{color:var(--accent-soft)}
 .nav-links a.lk:hover::after{width:100%}
 .nav-links a.lk.active{color:var(--accent)}
 .nav-links a.lk.active::after{width:100%}
-.nav-links .nav-cta{padding:12px 22px;font-size:11.5px;animation:none}
+.nav-links .nav-cta{padding:12px 18px;font-size:11px;animation:none;white-space:nowrap}
 .menu-toggle{display:none;background:none;border:none;color:var(--accent);font-size:1.8rem;cursor:pointer}
 
 /* page hero (subpages) */
@@ -331,6 +331,8 @@ footer ul li a:hover{color:var(--accent-soft)}
   .funded-grid,.sponsor-grid,.tier-grid,.contact-grid,.board-grid{grid-template-columns:1fr 1fr}
   .form-grid{grid-template-columns:1fr}
   .nav-links .nav-cta{display:none}
+  .nav-links{gap:15px}
+  .nav-links a.lk{font-size:10.5px;letter-spacing:.06em}
 }
 @media(max-width:680px){
   body{font-size:16px}
@@ -350,6 +352,23 @@ footer ul li a:hover{color:var(--accent-soft)}
   footer{padding-bottom:100px}
   .page-hero{padding:140px 0 64px}
 }
+
+/* ---- member portal handoff (links out to the club's existing system) ---- */
+.portal-card{
+  background:linear-gradient(160deg,rgba(255,122,26,.14),transparent 55%),var(--card);
+  border:1px solid rgba(255,122,26,.5);border-radius:20px;
+  padding:clamp(30px,4.5vw,54px);text-align:center;box-shadow:var(--shadow);
+  transition:.35s cubic-bezier(.16,1,.3,1);
+}
+.portal-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+.portal-card .p-tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#120a03;background:var(--accent);border-radius:30px;padding:6px 16px;margin-bottom:18px}
+.portal-card h3{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--text)}
+.portal-card p{color:var(--muted);max-width:560px;margin:14px auto 0}
+.portal-card .btn{margin-top:26px}
+.portal-note{color:var(--muted);font-size:.86rem;margin-top:16px;font-style:italic}
+.ext::after{content:"\2002\2197";font-weight:700}
+.two-up{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:780px){.two-up{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -364,12 +383,12 @@ footer ul li a:hover{color:var(--accent-soft)}
     </a>
     <nav class="nav-links" id="navLinks">
       <a class="lk" href="index.html">Home</a>
-      <a class="lk active" aria-current="page" href="initiatives.html">Our Impact</a>
-      <a class="lk" href="get-involved.html">Get Involved</a>
+      <a class="lk active" aria-current="page" href="events.html">Events</a>
+      <a class="lk" href="about.html">About Us</a>
       <a class="lk" href="sponsorship.html">Sponsorship</a>
-      <a class="lk" href="sponsors.html">Sponsors</a>
-      <a class="lk" href="schedules.html">Schedules</a>
-      <a class="lk" href="contact.html">Contact</a>
+      <a class="lk" href="memberships.html">Memberships</a>
+      <a class="lk" href="store.html">Store</a>
+      <a class="lk" href="coaches-corner.html">Coaches Corner</a>
       <a class="btn btn-primary nav-cta" href="sponsorship.html">Become a Sponsor</a>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
@@ -379,74 +398,100 @@ footer ul li a:hover{color:var(--accent-soft)}
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="wrap">
-    <p class="eyebrow">Our Impact</p>
-    <h1>WHERE THE <em>MONEY GOES</em></h1>
-    <p class="lede">Every dollar is raised by volunteers and spent on Sandwich High School athletes. Here's the receipts.</p>
+    <p class="eyebrow">Events &amp; Schedules</p>
+    <h1>MARK THE <em>CALENDAR</em></h1>
+    <p class="lede">Our fundraisers keep the programs funded. The schedules below tell you where the Indians are playing next.</p>
   </div>
 </section>
 
-<!-- HEADLINE STATS -->
+<!-- BOOSTER EVENTS -->
 <section style="padding-top:34px">
   <div class="wrap">
-    <div class="stats stagger" style="grid-template-columns:repeat(2,1fr);max-width:760px;margin-inline:auto">
-      <div class="stat-item"><div class="num">$115,000+</div><div class="lbl">Returned to SHS athletics since 2023</div></div>
-      <div class="stat-item"><div class="num">$79,000+</div><div class="lbl">Of that since May 2024 alone</div></div>
+    <p class="eyebrow">Booster Events</p>
+    <h2 class="sec-title">UPCOMING <em>EVENTS</em></h2>
+    <p class="sec-sub">Recurring fundraisers that keep the program rolling &mdash; dates land on our Facebook first.</p>
+    <div style="margin-top:52px">
+<!-- EVENTS:BEGIN — auto-managed region. A future update pipeline regenerates ONLY the
+     markup between these two markers. Keep styles and scripts out of this region. -->
+<div class="events-grid" id="upcoming-events">
+  <article class="event-card" data-event-id="poker-night">
+    <div class="event-when">Date TBA &mdash; follow our Facebook</div>
+    <h3 class="event-title">POKER NIGHT FUNDRAISER</h3>
+    <p class="event-desc">A community poker night for SHS sports &mdash; all skill levels welcome, friendly competition, funds go straight back to the teams.</p>
+    <a class="event-link" href="https://www.facebook.com/sandwichsportsboosters" target="_blank" rel="noopener">Event details</a>
+  </article>
+  <article class="event-card" data-event-id="block-party">
+    <div class="event-when">Date TBA &mdash; follow our Facebook</div>
+    <h3 class="event-title">BLOCK PARTY</h3>
+    <p class="event-desc">Thrown together with the SHS Football Team, the Junior Class, and SYTF &mdash; a whole-town party with a purpose.</p>
+    <a class="event-link" href="https://www.facebook.com/sandwichsportsboosters" target="_blank" rel="noopener">Event details</a>
+  </article>
+  <article class="event-card" data-event-id="fair-booth">
+    <div class="event-when">Date TBA &mdash; follow our Facebook</div>
+    <h3 class="event-title">SANDWICH FAIR BOOTH</h3>
+    <p class="event-desc">Our booth at the Sandwich Fair, staffed entirely by volunteers &mdash; stop by, say hi, and fuel the Indians.</p>
+    <a class="event-link" href="https://www.facebook.com/sandwichsportsboosters" target="_blank" rel="noopener">Event details</a>
+  </article>
+</div>
+<!-- EVENTS:END -->
     </div>
+    <p class="sec-sub" style="margin-top:32px">Want to work an event? We always need hands. <a href="about.html" style="color:var(--accent)">See how to help</a>.</p>
   </div>
 </section>
 
-<!-- FEATURED PROJECT -->
+<!-- SCHEDULES -->
 <section class="band">
-  <div class="wrap split">
-    <div class="split-photo photo-ph">
-      <!-- REPLACE WITH REAL PHOTO: the Main Gym digital projector system in action -->
-      <span class="cam">&#128247;</span><small>Main Gym Projector System</small>
+  <div class="wrap">
+    <p class="eyebrow">Game Days</p>
+    <h2 class="sec-title">SHS ATHLETIC <em>SCHEDULES</em></h2>
+    <p class="sec-sub">Straight from the official sources, so they're always current.</p>
+    <div style="margin-top:48px">
+      <a class="portal-card" href="https://athletics.sandwichk12.org/schedules" target="_blank" rel="noopener" style="display:block">
+        <span class="p-tag">Official District Source</span>
+        <h3>SANDWICH CUSD #430 SCHEDULES</h3>
+        <p>Live schedules for every SHS team, maintained by the district's athletics department.</p>
+        <span class="btn btn-primary ext">Open the Schedules</span>
+      </a>
     </div>
-    <div class="copy left">
-      <p class="eyebrow">Featured Project</p>
-      <h2 class="sec-title">THE $40,000 <em>MAIN GYM PROJECTOR</em></h2>
-      <p>The biggest single investment yet: a full digital projector system for the Main Gym &mdash; game-day introductions, crowd energy, and a home-court feel that matches the teams playing under it.</p>
-      <p><b>Funded entirely by boosters fundraising. No district budget required.</b></p>
+    <div class="resource-grid stagger" style="margin-top:34px">
+      <a class="resource-card" href="https://www.ihsa.org/schools/details/1908" target="_blank" rel="noopener">
+        <div class="tag">Postseason</div>
+        <h3>IHSA</h3>
+        <p>State series brackets, assignments, and results for Sandwich High School.</p>
+        <span class="go">ihsa.org</span>
+      </a>
+      <a class="resource-card" href="https://www.maxpreps.com/il/sandwich/sandwich-indians/" target="_blank" rel="noopener">
+        <div class="tag">Scores &amp; Stats</div>
+        <h3>MAXPREPS</h3>
+        <p>Schedules, scores, rosters, and stats for the Sandwich Indians &mdash; every sport, every season.</p>
+        <span class="go">maxpreps.com</span>
+      </a>
+      <a class="resource-card" href="https://www.nfhsnetwork.com/schools/sandwich-high-school-sandwich-il" target="_blank" rel="noopener">
+        <div class="tag">Watch Live</div>
+        <h3>NFHS NETWORK</h3>
+        <p>Live and on-demand broadcasts of Sandwich High School events.</p>
+        <span class="go">nfhsnetwork.com</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- FUNDED GRID -->
+<!-- SPORTS -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">The Full List</p>
-    <h2 class="sec-title">BOUGHT AND <em>PAID FOR</em></h2>
-    <p class="sec-sub">Recent projects funded by boosters dollars, across every corner of SHS athletics.</p>
-    <div class="funded-grid stagger" style="margin-top:52px">
-      <div class="funded-card"><div class="ic">&#129340;</div><h3>WRESTLING MATS</h3><p>New mats for the wrestling program.</p></div>
-      <div class="funded-card"><div class="ic">&#9918;</div><h3>BASEBALL BACKSTOP CAGE</h3><p>A new backstop cage for the diamond.</p></div>
-      <div class="funded-card"><div class="ic">&#129358;</div><h3>SOFTBALL PITCHING MACHINE</h3><p>Reps on demand for the softball program.</p></div>
-      <div class="funded-card"><div class="ic">&#127952;</div><h3>VOLLEYBALL NETTING SYSTEM</h3><p>A new netting system for the volleyball program.</p></div>
-      <div class="funded-card"><div class="ic">&#127937;</div><h3>GYM BANNERS</h3><p>Banners that make the gym feel like home.</p></div>
-      <div class="funded-card"><div class="ic">&#129681;</div><h3>SIDELINE GYM CHAIRS</h3><p>$3,760 in new sideline chairs &mdash; used at basketball, volleyball, wrestling, and special events.</p></div>
-      <div class="funded-card"><div class="ic">&#127942;</div><h3>SPORTSMANSHIP AWARDS</h3><p>We provide the Sportsmanship award for every sport at SHS.</p></div>
-      <div class="funded-card"><div class="ic">&#127891;</div><h3>SCHOLARSHIPS</h3><p>A standing Scholarship committee supports SHS student-athletes beyond graduation.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT'S RAISED -->
-<section class="band">
-  <div class="wrap">
-    <p class="eyebrow">How It's Raised</p>
-    <h2 class="sec-title">VOLUNTEER HOURS IN, <em>EQUIPMENT OUT</em></h2>
-    <p class="sec-sub">The fund is built from memberships, raffles, our Sandwich Fair booth, concessions, community events, and local sponsors.</p>
+    <p class="eyebrow">The Programs</p>
+    <h2 class="sec-title">EVERY TEAM WE <em>BACK</em></h2>
     <div class="ways stagger" style="margin-top:44px">
-      <span class="way">Annual memberships</span>
-      <span class="way">Raffle tickets</span>
-      <span class="way">Sandwich Fair booth</span>
-      <span class="way">Concession stand</span>
-      <span class="way">Poker Night &amp; the Block Party</span>
-      <span class="way">Local sponsorships</span>
-    </div>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:38px">
-      <a class="btn btn-primary" href="get-involved.html">Volunteer With Us</a>
-      <a class="btn btn-ghost" href="sponsorship.html">Sponsor a Season</a>
+      <span class="way">Football</span>
+      <span class="way">Boys &amp; Girls Basketball</span>
+      <span class="way">Baseball</span>
+      <span class="way">Softball</span>
+      <span class="way">Volleyball</span>
+      <span class="way">Wrestling</span>
+      <span class="way">Cross Country</span>
+      <span class="way">Soccer</span>
+      <span class="way">Golf</span>
+      <span class="way">Track &amp; Field</span>
     </div>
   </div>
 </section>
@@ -454,11 +499,11 @@ footer ul li a:hover{color:var(--accent-soft)}
 <!-- CTA BAND -->
 <section class="cta-band">
   <div class="wrap">
-    <h2>THE NEXT PROJECT IS <em>ALREADY WAITING.</em></h2>
-    <p>Help decide what SHS athletes get next &mdash; sponsor it, fund it, or work the events that pay for it.</p>
+    <h2>SEE YOU IN <em>THE STANDS.</em></h2>
+    <p>And if you're staying for the whole game anyway &mdash; we could use a hand at the concession stand.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="sponsorship.html">Become a Sponsor</a>
-      <a class="btn btn-ghost" href="contact.html">Ask Us Anything</a>
+      <a class="btn btn-primary" href="about.html">Volunteer With Us</a>
+      <a class="btn btn-ghost ext" href="https://www.facebook.com/sandwichsportsboosters" target="_blank" rel="noopener">Follow On Facebook</a>
     </div>
   </div>
 </section>
@@ -482,11 +527,12 @@ footer ul li a:hover{color:var(--accent-soft)}
       <div class="footer-col">
         <h5>Explore</h5>
         <ul>
-          <li><a href="initiatives.html">Where the Money Goes</a></li>
-          <li><a href="get-involved.html">Join a Committee</a></li>
-          <li><a href="sponsorship.html">Sponsorship Opportunities</a></li>
-          <li><a href="sponsors.html">Our Sponsors</a></li>
-          <li><a href="schedules.html">SHS Athletic Schedules</a></li>
+          <li><a href="events.html">Events &amp; Schedules</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="sponsorship.html">Sponsorship</a></li>
+          <li><a href="memberships.html">Memberships</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="coaches-corner.html">Coaches Corner</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
