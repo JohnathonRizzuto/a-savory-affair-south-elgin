@@ -471,6 +471,24 @@ footer ul li a:hover{color:var(--accent-soft)}
   .link-row .lr-go{display:none}
 }
 
+/* ---- featured action tiles (home) — distinct from the card grids ---- */
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.feature-tile{position:relative;display:block;overflow:hidden;border-radius:18px;border:1px solid var(--line);
+  background:linear-gradient(160deg,var(--card-soft),var(--card));box-shadow:var(--shadow-sm);
+  transition:.35s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column}
+.feature-tile:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:var(--shadow)}
+.feature-tile .ft-art{aspect-ratio:16/7;overflow:hidden;position:relative}
+.feature-tile .ft-art img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.feature-tile:hover .ft-art img{transform:scale(1.05)}
+.feature-tile .ft-body{padding:26px 28px 30px;flex:1;display:flex;flex-direction:column}
+.feature-tile .ft-tag{font-size:10.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.feature-tile h3{font-size:1.85rem;color:var(--text);letter-spacing:.05em;margin-top:8px}
+.feature-tile p{color:var(--muted);font-size:.99rem;margin-top:10px;flex:1}
+.feature-tile .ft-go{margin-top:20px;font-weight:800;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+.feature-tile .ft-go::after{content:"\2002\2197"}
+.feature-tile.internal .ft-go::after{content:"\2002\2192"}
+@media(max-width:780px){.feature-grid{grid-template-columns:1fr}}
+
 /* ---- page-specific ---- */
 .home-hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 90px;overflow:hidden;background:
   radial-gradient(900px 500px at 82% 12%,rgba(255,122,26,.14),transparent 65%),
@@ -619,40 +637,99 @@ footer ul li a:hover{color:var(--accent-soft)}
   </div>
 </section>
 
-<!-- WHERE TO GO NEXT -->
+<!-- FEATURED ACTIONS — these four go straight to where the action actually happens -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">Find What You Need</p>
-    <h2 class="sec-title">WHERE TO <em>GO NEXT</em></h2>
+    <p class="eyebrow">Start Here</p>
+    <h2 class="sec-title">FOUR WAYS TO <em>BACK THE INDIANS</em></h2>
+    <p class="sec-sub">Everything below opens where it really lives &mdash; no hunting through the site to get there.</p>
+    <div class="feature-grid stagger" style="margin-top:48px">
+
+      <!-- EXTERNAL: signup + payment happen in the club's store -->
+      <a class="feature-tile" href="https://sandwichsportsboosters.org/digital-services" target="_blank" rel="noopener">
+        <div class="ft-art photo-ph">
+          <!-- REPLACE WITH REAL PHOTO: a team using boosters-funded equipment -->
+          <span class="cam">&#128247;</span><small>Membership</small>
+        </div>
+        <div class="ft-body">
+          <div class="ft-tag">Families</div>
+          <h3>BECOME A MEMBER</h3>
+          <p>The simplest way to back every team at once. Dues don't go to overhead &mdash; they buy the mats, machines and nets SHS teams actually use.</p>
+          <span class="ft-go">Join in our store</span>
+        </div>
+      </a>
+
+      <!-- EXTERNAL: checkout happens in the club's store -->
+      <a class="feature-tile" href="https://sandwichsportsboosters.org/digital-services" target="_blank" rel="noopener">
+        <div class="ft-art photo-ph">
+          <!-- REPLACE WITH REAL PHOTO: spirit wear / merchandise -->
+          <span class="cam">&#128085;</span><small>Spirit Wear</small>
+        </div>
+        <div class="ft-body">
+          <div class="ft-tag">Everyone</div>
+          <h3>VISIT OUR STORE</h3>
+          <p>Indians spirit wear for players, parents and the student section. Buy something you'd wear anyway and it funds a team.</p>
+          <span class="ft-go">Shop the store</span>
+        </div>
+      </a>
+
+      <!-- EXTERNAL: schedules are maintained by the school, so they're always current -->
+      <a class="feature-tile" href="https://shs.sandwich430.org/athletics-home" target="_blank" rel="noopener">
+        <div class="ft-art photo-ph">
+          <!-- REPLACE WITH REAL PHOTO: game action or the scoreboard -->
+          <span class="cam">&#128247;</span><small>Game Day</small>
+        </div>
+        <div class="ft-body">
+          <div class="ft-tag">Fans &amp; Families</div>
+          <h3>SHS SPORTS SCHEDULES</h3>
+          <p>Every team, every game, straight from the school &mdash; so it's never out of date.</p>
+          <span class="ft-go">See the schedules</span>
+        </div>
+      </a>
+
+      <!-- EXTERNAL: coaches submit requests on the club's Google Form.
+           REPLACE HREF with the real Google Form URL from the club. -->
+      <a class="feature-tile" href="#REPLACE-WITH-COACHES-GOOGLE-FORM" target="_blank" rel="noopener">
+        <div class="ft-art photo-ph">
+          <!-- REPLACE WITH REAL PHOTO: a coach with a team -->
+          <span class="cam">&#128247;</span><small>Coaches</small>
+        </div>
+        <div class="ft-body">
+          <div class="ft-tag">SHS Coaches</div>
+          <h3>REQUEST FUNDING</h3>
+          <p>Need something for your program? Fill out the request form &mdash; it's how the projector, the mats and the pitching machine all started.</p>
+          <span class="ft-go">Open the request form</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- LEARN MORE — these stay on our site on purpose: sponsorship is a pitch, not a transaction -->
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Learn More</p>
+    <h2 class="sec-title">ABOUT THE <em>BOOSTERS</em></h2>
     <div class="link-rows reveal" style="margin-top:44px">
-      <a class="link-row" href="events.html">
-        <span class="lr-num">01</span>
-        <span class="lr-body"><h3>EVENTS &amp; SHS SCHEDULES</h3><p>Our fundraisers, plus every Indians game day.</p></span>
-        <span class="lr-go">View &rarr;</span>
-      </a>
       <a class="link-row" href="sponsorship.html">
+        <span class="lr-num">01</span>
+        <span class="lr-body"><h3>SPONSORSHIP</h3><p>Levels, what sponsors get, and the businesses already on board.</p></span>
+        <span class="lr-go">View &rarr;</span>
+      </a>
+      <a class="link-row" href="events.html">
         <span class="lr-num">02</span>
-        <span class="lr-body"><h3>SPONSORSHIP</h3><p>Put your business in front of the whole town.</p></span>
+        <span class="lr-body"><h3>EVENTS</h3><p>Poker Night, the Block Party, and our Sandwich Fair booth.</p></span>
         <span class="lr-go">View &rarr;</span>
       </a>
-      <a class="link-row" href="memberships.html">
+      <a class="link-row" href="about.html">
         <span class="lr-num">03</span>
-        <span class="lr-body"><h3>MEMBERSHIPS</h3><p>The simplest way for a family to back the teams.</p></span>
-        <span class="lr-go">View &rarr;</span>
-      </a>
-      <a class="link-row" href="store.html">
-        <span class="lr-num">04</span>
-        <span class="lr-body"><h3>STORE</h3><p>Indians spirit wear &mdash; every order funds a team.</p></span>
-        <span class="lr-go">View &rarr;</span>
-      </a>
-      <a class="link-row" href="coaches-corner.html">
-        <span class="lr-num">05</span>
-        <span class="lr-body"><h3>COACHES CORNER</h3><p>For SHS coaches: how to request funding.</p></span>
+        <span class="lr-body"><h3>WHO WE ARE</h3><p>The board, the committees, and everything we've funded.</p></span>
         <span class="lr-go">View &rarr;</span>
       </a>
       <a class="link-row" href="contact.html">
-        <span class="lr-num">06</span>
-        <span class="lr-body"><h3>CONTACT US</h3><p>Questions about anything above.</p></span>
+        <span class="lr-num">04</span>
+        <span class="lr-body"><h3>CONTACT US</h3><p>Questions about any of the above.</p></span>
         <span class="lr-go">View &rarr;</span>
       </a>
     </div>

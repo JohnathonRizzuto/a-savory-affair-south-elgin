@@ -470,6 +470,24 @@ footer ul li a:hover{color:var(--accent-soft)}
   .link-row .lr-num{font-size:1.5rem;min-width:32px}
   .link-row .lr-go{display:none}
 }
+
+/* ---- featured action tiles (home) — distinct from the card grids ---- */
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.feature-tile{position:relative;display:block;overflow:hidden;border-radius:18px;border:1px solid var(--line);
+  background:linear-gradient(160deg,var(--card-soft),var(--card));box-shadow:var(--shadow-sm);
+  transition:.35s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column}
+.feature-tile:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:var(--shadow)}
+.feature-tile .ft-art{aspect-ratio:16/7;overflow:hidden;position:relative}
+.feature-tile .ft-art img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.feature-tile:hover .ft-art img{transform:scale(1.05)}
+.feature-tile .ft-body{padding:26px 28px 30px;flex:1;display:flex;flex-direction:column}
+.feature-tile .ft-tag{font-size:10.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.feature-tile h3{font-size:1.85rem;color:var(--text);letter-spacing:.05em;margin-top:8px}
+.feature-tile p{color:var(--muted);font-size:.99rem;margin-top:10px;flex:1}
+.feature-tile .ft-go{margin-top:20px;font-weight:800;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+.feature-tile .ft-go::after{content:"\2002\2197"}
+.feature-tile.internal .ft-go::after{content:"\2002\2192"}
+@media(max-width:780px){.feature-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -522,11 +540,12 @@ footer ul li a:hover{color:var(--accent-soft)}
     <p class="eyebrow">How It Works</p>
     <h2 class="sec-title">ASKING IS <em>THE WHOLE PROCESS</em></h2>
     <div class="link-rows reveal" style="margin-top:44px">
-      <div class="link-row"><span class="lr-num">&#9679;</span><span class="lr-body"><h3>TELL US WHAT YOU NEED</h3><p>Email the Boosters with the item, roughly what it costs, and which program it's for.</p></span></div>
+      <div class="link-row"><span class="lr-num">&#9679;</span><span class="lr-body"><h3>TELL US WHAT YOU NEED</h3><p>Fill out the request form with the item, roughly what it costs, and which program it's for.</p></span></div>
       <div class="link-row"><span class="lr-num">&#9679;</span><span class="lr-body"><h3>WE REVIEW IT</h3><p>Requests go to the board. We weigh it against what's already committed for the season.</p></span></div>
       <div class="link-row"><span class="lr-num">&#9679;</span><span class="lr-body"><h3>WE FUND WHAT WE CAN</h3><p>Approved requests get purchased. That's how the mats, nets, cages, and machines happened.</p></span></div>
     </div>
-    <p style="text-align:center;margin-top:44px"><a class="btn btn-primary" href="mailto:sandwichsportsboosters@gmail.com?subject=Coach%20Funding%20Request">Submit a Request</a></p>
+    <p style="text-align:center;margin-top:44px"><!-- COACHES REQUEST FORM: replace href with the club's real Google Form URL -->
+      <a class="btn btn-primary ext" href="#REPLACE-WITH-COACHES-GOOGLE-FORM" target="_blank" rel="noopener">Open the Request Form</a></p>
   </div>
 </section>
 
@@ -575,7 +594,7 @@ footer ul li a:hover{color:var(--accent-soft)}
     <h2>IF YOUR PROGRAM <em>NEEDS SOMETHING</em> &mdash; ASK.</h2>
     <p>The worst answer is "not this season." Most of the time it's yes.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="mailto:sandwichsportsboosters@gmail.com?subject=Coach%20Funding%20Request">Email the Boosters</a>
+      <a class="btn btn-primary ext" href="#REPLACE-WITH-COACHES-GOOGLE-FORM" target="_blank" rel="noopener">Open the Request Form</a>
       <a class="btn btn-ghost" href="about.html">See Our Impact</a>
     </div>
   </div>
