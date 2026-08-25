@@ -369,6 +369,107 @@ footer ul li a:hover{color:var(--accent-soft)}
 .ext::after{content:"\2002\2197";font-weight:700}
 .two-up{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 @media(max-width:780px){.two-up{grid-template-columns:1fr}}
+
+/* ============ VARIED LAYOUT COMPONENTS (anti-cookie-cutter) ============ */
+
+/* full-bleed photo hero with dark overlay */
+.photo-hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:150px 0 90px}
+.photo-hero .bg{position:absolute;inset:0;z-index:0}
+.photo-hero .bg img{width:100%;height:100%;object-fit:cover}
+.photo-hero .bg.photo-ph{border:none}
+.photo-hero .scrim{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(180deg,rgba(13,11,9,.72) 0%,rgba(13,11,9,.58) 45%,rgba(13,11,9,.96) 100%),
+  radial-gradient(900px 500px at 78% 22%,rgba(255,122,26,.22),transparent 68%)}
+.photo-hero .wrap{position:relative;z-index:2}
+.hero-lockup{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.hero-lockup img.crest{width:min(210px,42vw);height:auto;filter:drop-shadow(0 22px 44px rgba(0,0,0,.8)) drop-shadow(0 0 40px rgba(255,122,26,.28));margin-bottom:8px}
+.hero-lockup h1{font-size:clamp(2.9rem,7.5vw,6rem);color:var(--text);text-shadow:0 6px 30px rgba(0,0,0,.6)}
+.hero-lockup h1 em{font-style:normal;color:var(--accent)}
+.hero-lockup .sub{font-size:clamp(1rem,2.2vw,1.35rem);color:var(--accent-soft);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:10px}
+.hero-lockup .blurb{max-width:620px;color:#ddd2c4;font-size:1.1rem;margin-top:20px}
+.hero-lockup .btn-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+
+/* full-bleed photo band with text over it */
+.photo-band{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;padding:80px 0}
+.photo-band .bg{position:absolute;inset:0;z-index:0}
+.photo-band .bg img{width:100%;height:100%;object-fit:cover}
+.photo-band .bg.photo-ph{border:none}
+.photo-band .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(13,11,9,.94) 0%,rgba(13,11,9,.78) 48%,rgba(13,11,9,.45) 100%)}
+.photo-band .wrap{position:relative;z-index:2}
+.photo-band .inner{max-width:620px}
+.photo-band h2{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--text)}
+.photo-band h2 em{font-style:normal;color:var(--accent)}
+.photo-band p{color:#ddd2c4;font-size:1.08rem;margin-top:16px}
+
+/* asymmetric alternating rows (no boxes) */
+.alt-row{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,68px);align-items:center}
+.alt-row.flip{grid-template-columns:.85fr 1.15fr}
+.alt-row.flip .alt-copy{order:2}
+.alt-row.flip .alt-art{order:1}
+.alt-copy h2{font-size:clamp(2rem,4.4vw,3.2rem);color:var(--text)}
+.alt-copy h2 em{font-style:normal;color:var(--accent)}
+.alt-copy p{color:var(--muted);font-size:1.06rem;margin-top:16px}
+.alt-copy p b{color:var(--text)}
+.alt-copy .kicker{font-size:12px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.alt-art{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;position:relative}
+.alt-art.tall{aspect-ratio:3/4}
+.alt-art img{width:100%;height:100%;object-fit:cover}
+/* offset accent frame behind the art */
+.alt-art-wrap{position:relative}
+.alt-art-wrap::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border:2px solid rgba(255,122,26,.4);border-radius:20px;z-index:0}
+.alt-art-wrap .alt-art{position:relative;z-index:1}
+
+/* photo mosaic — deliberately uneven */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px}
+.mosaic > *{border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);transition:.4s cubic-bezier(.16,1,.3,1)}
+.mosaic > *:hover{transform:scale(1.02);box-shadow:var(--shadow)}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic .w2{grid-column:span 2}
+.mosaic .h2{grid-row:span 2}
+
+/* giant single call-to-action link block */
+.big-link{display:block;position:relative;overflow:hidden;text-align:center;border-radius:22px;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent-deep) 100%);
+  color:#150b02;padding:clamp(40px,6vw,72px) 28px;box-shadow:0 26px 60px -24px rgba(255,122,26,.75);
+  transition:.35s cubic-bezier(.16,1,.3,1)}
+.big-link:hover{transform:translateY(-5px);box-shadow:0 34px 72px -22px rgba(255,122,26,.9)}
+.big-link::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transform:translateX(-130%);transition:.7s}
+.big-link:hover::after{transform:translateX(130%)}
+.big-link .bl-tag{font-size:11.5px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;opacity:.72}
+.big-link h2{font-size:clamp(2.3rem,6vw,4.4rem);margin-top:10px;color:#150b02}
+.big-link .bl-note{margin-top:14px;font-weight:700;font-size:1rem;opacity:.8}
+
+/* event rows — photo on top, no boxy card */
+.event-row{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(24px,4vw,52px);align-items:center;padding:clamp(28px,4vw,44px) 0;border-top:1px solid var(--line)}
+.event-row:first-child{border-top:none}
+.event-row.flip .ev-copy{order:2}
+.event-row.flip .ev-art{order:1}
+.ev-art{border-radius:16px;overflow:hidden;aspect-ratio:16/10;box-shadow:var(--shadow-sm)}
+.ev-art img{width:100%;height:100%;object-fit:cover}
+.ev-copy h3{font-size:clamp(1.8rem,3.6vw,2.7rem);color:var(--text)}
+.ev-copy .when{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(255,122,26,.4);border-radius:30px;padding:6px 15px;margin-bottom:14px}
+.ev-copy p{color:var(--muted);font-size:1.05rem;margin-top:12px}
+
+/* lightweight link rows (replaces identical card grids) */
+.link-rows{border-top:1px solid var(--line)}
+.link-row{display:flex;align-items:center;gap:26px;padding:26px 6px;border-bottom:1px solid var(--line);transition:.3s}
+.link-row:hover{background:rgba(255,122,26,.05);padding-left:16px}
+.link-row .lr-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:2rem;color:rgba(255,122,26,.4);min-width:44px}
+.link-row .lr-body{flex:1;min-width:0}
+.link-row h3{font-size:1.5rem;color:var(--text);letter-spacing:.04em}
+.link-row p{color:var(--muted);font-size:.98rem;margin-top:4px}
+.link-row .lr-go{color:var(--accent);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+
+@media(max-width:900px){
+  .alt-row,.alt-row.flip,.event-row,.event-row.flip{grid-template-columns:1fr;gap:28px}
+  .alt-row.flip .alt-copy,.alt-row.flip .alt-art,.event-row.flip .ev-copy,.event-row.flip .ev-art{order:unset}
+  .alt-art-wrap::before{display:none}
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}
+  .photo-band .scrim{background:linear-gradient(180deg,rgba(13,11,9,.86),rgba(13,11,9,.94))}
+  .link-row{gap:16px;padding:22px 4px}
+  .link-row .lr-num{font-size:1.5rem;min-width:32px}
+  .link-row .lr-go{display:none}
+}
 </style>
 </head>
 <body>
@@ -376,9 +477,9 @@ footer ul li a:hover{color:var(--accent-soft)}
 <header id="hdr">
   <div class="wrap nav">
     <a href="index.html" class="brand">
-      <!-- Live logo from the club's Facebook page; falls back to the local stand-in crest.
-           REPLACE WITH REAL LOGO FILE: drop the club's logo into img/logo.png to make it permanent. -->
-      <img src="https://graph.facebook.com/138408359519417/picture?width=320&amp;height=320" alt="Sandwich Sports Boosters logo" onerror="this.onerror=null;this.src='img/logo.png';" />
+      <img src="img/logo.png" alt="Sandwich Sports Boosters logo" />
+      <!-- LOGO: transparent PNG sized for the dark background.
+           REPLACE WITH REAL LOGO: drop the club's cut-out S-arrow logo into img/logo.png -->
       <span class="bt">SANDWICH <span>SPORTS BOOSTERS</span><small>Supporting SHS Athletics</small></span>
     </a>
     <nav class="nav-links" id="navLinks">
@@ -399,111 +500,110 @@ footer ul li a:hover{color:var(--accent-soft)}
 <section class="page-hero">
   <div class="wrap">
     <p class="eyebrow">Events &amp; Schedules</p>
-    <h1>MARK THE <em>CALENDAR</em></h1>
-    <p class="lede">Our fundraisers keep the programs funded. The schedules below tell you where the Indians are playing next.</p>
+    <h1>GAME DAYS &amp; <em>GOOD TIMES</em></h1>
+    <p class="lede">Where the Indians are playing next, and the fundraisers that keep every program funded.</p>
   </div>
 </section>
 
-<!-- BOOSTER EVENTS -->
-<section style="padding-top:34px">
+<!-- BIG SCHEDULES BUTTON — the centerpiece -->
+<section style="padding-top:20px">
+  <div class="wrap" style="max-width:920px">
+    <!-- SCHEDULES LINK: the club's old athletics.sandwichk12.org link is dead.
+         VERIFY with the club that this is the right live schedules page. -->
+    <a class="big-link reveal" href="https://shs.sandwich430.org/athletics-home" target="_blank" rel="noopener">
+      <div class="bl-tag">Sandwich High School</div>
+      <h2>SHS SPORTS SCHEDULES</h2>
+      <div class="bl-note">Every team, every game &mdash; straight from the school &nbsp;&#8599;</div>
+    </a>
+  </div>
+</section>
+
+<!-- UPCOMING EVENTS -->
+<section class="band">
   <div class="wrap">
-    <p class="eyebrow">Booster Events</p>
+    <p class="eyebrow">Save the Date</p>
     <h2 class="sec-title">UPCOMING <em>EVENTS</em></h2>
-    <p class="sec-sub">Recurring fundraisers that keep the program rolling &mdash; dates land on our Facebook first.</p>
-    <div style="margin-top:52px">
+    <p class="sec-sub">The fundraisers our whole town shows up for.</p>
+    <div style="margin-top:46px">
 <!-- EVENTS:BEGIN — auto-managed region. A future update pipeline regenerates ONLY the
      markup between these two markers. Keep styles and scripts out of this region. -->
-<div class="events-grid" id="upcoming-events">
-  <article class="event-card" data-event-id="poker-night">
-    <div class="event-when">Date TBA &mdash; follow our Facebook</div>
-    <h3 class="event-title">POKER NIGHT FUNDRAISER</h3>
-    <p class="event-desc">A community poker night for SHS sports &mdash; all skill levels welcome, friendly competition, funds go straight back to the teams.</p>
-    <a class="event-link" href="https://www.facebook.com/sandwichsportsboosters" target="_blank" rel="noopener">Event details</a>
+<div id="upcoming-events">
+  <article class="event-row" data-event-id="poker-night">
+    <div class="ev-art photo-ph">
+      <!-- REPLACE WITH REAL PHOTO: Poker Night -->
+      <span class="cam">&#128247;</span><small>Poker Night</small>
+    </div>
+    <div class="ev-copy">
+      <span class="when">Date To Be Announced</span>
+      <h3>POKER NIGHT FUNDRAISER</h3>
+      <p>A community poker night for SHS sports &mdash; all skill levels welcome, friendly competition, and every dollar goes straight back to the teams.</p>
+    </div>
   </article>
-  <article class="event-card" data-event-id="block-party">
-    <div class="event-when">Date TBA &mdash; follow our Facebook</div>
-    <h3 class="event-title">BLOCK PARTY</h3>
-    <p class="event-desc">Thrown together with the SHS Football Team, the Junior Class, and SYTF &mdash; a whole-town party with a purpose.</p>
-    <a class="event-link" href="https://www.facebook.com/sandwichsportsboosters" target="_blank" rel="noopener">Event details</a>
+  <article class="event-row flip" data-event-id="block-party">
+    <div class="ev-art photo-ph">
+      <!-- REPLACE WITH REAL PHOTO: Block Party -->
+      <span class="cam">&#128247;</span><small>Block Party</small>
+    </div>
+    <div class="ev-copy">
+      <span class="when">Date To Be Announced</span>
+      <h3>BLOCK PARTY</h3>
+      <p>Thrown together with the SHS Football Team, the Junior Class, and SYTF &mdash; a whole-town party with a purpose.</p>
+    </div>
   </article>
-  <article class="event-card" data-event-id="fair-booth">
-    <div class="event-when">Date TBA &mdash; follow our Facebook</div>
-    <h3 class="event-title">SANDWICH FAIR BOOTH</h3>
-    <p class="event-desc">Our booth at the Sandwich Fair, staffed entirely by volunteers &mdash; stop by, say hi, and fuel the Indians.</p>
-    <a class="event-link" href="https://www.facebook.com/sandwichsportsboosters" target="_blank" rel="noopener">Event details</a>
+  <article class="event-row" data-event-id="fair-booth">
+    <div class="ev-art photo-ph">
+      <!-- REPLACE WITH REAL PHOTO: Sandwich Fair booth -->
+      <span class="cam">&#128247;</span><small>Sandwich Fair Booth</small>
+    </div>
+    <div class="ev-copy">
+      <span class="when">Sandwich Fair Week</span>
+      <h3>SANDWICH FAIR BOOTH</h3>
+      <p>Our booth at the Sandwich Fair, staffed start to finish by volunteers. Stop by, say hi, and fuel the Indians.</p>
+    </div>
   </article>
 </div>
 <!-- EVENTS:END -->
     </div>
-    <p class="sec-sub" style="margin-top:32px">Want to work an event? We always need hands. <a href="about.html" style="color:var(--accent)">See how to help</a>.</p>
   </div>
 </section>
 
-<!-- SCHEDULES -->
-<section class="band">
+<!-- VOLUNTEER BAND -->
+<section class="photo-band">
+  <div class="bg photo-ph">
+    <!-- REPLACE WITH REAL PHOTO: volunteers working an event — background band -->
+    <span class="cam">&#128247;</span><small>Background Photo</small>
+  </div>
+  <div class="scrim"></div>
   <div class="wrap">
-    <p class="eyebrow">Game Days</p>
-    <h2 class="sec-title">SHS ATHLETIC <em>SCHEDULES</em></h2>
-    <p class="sec-sub">Straight from the official sources, so they're always current.</p>
-    <div style="margin-top:48px">
-      <a class="portal-card" href="https://athletics.sandwichk12.org/schedules" target="_blank" rel="noopener" style="display:block">
-        <span class="p-tag">Official District Source</span>
-        <h3>SANDWICH CUSD #430 SCHEDULES</h3>
-        <p>Live schedules for every SHS team, maintained by the district's athletics department.</p>
-        <span class="btn btn-primary ext">Open the Schedules</span>
-      </a>
-    </div>
-    <div class="resource-grid stagger" style="margin-top:34px">
-      <a class="resource-card" href="https://www.ihsa.org/schools/details/1908" target="_blank" rel="noopener">
-        <div class="tag">Postseason</div>
-        <h3>IHSA</h3>
-        <p>State series brackets, assignments, and results for Sandwich High School.</p>
-        <span class="go">ihsa.org</span>
-      </a>
-      <a class="resource-card" href="https://www.maxpreps.com/il/sandwich/sandwich-indians/" target="_blank" rel="noopener">
-        <div class="tag">Scores &amp; Stats</div>
-        <h3>MAXPREPS</h3>
-        <p>Schedules, scores, rosters, and stats for the Sandwich Indians &mdash; every sport, every season.</p>
-        <span class="go">maxpreps.com</span>
-      </a>
-      <a class="resource-card" href="https://www.nfhsnetwork.com/schools/sandwich-high-school-sandwich-il" target="_blank" rel="noopener">
-        <div class="tag">Watch Live</div>
-        <h3>NFHS NETWORK</h3>
-        <p>Live and on-demand broadcasts of Sandwich High School events.</p>
-        <span class="go">nfhsnetwork.com</span>
-      </a>
+    <div class="inner reveal">
+      <h2>THESE DON'T RUN <em>THEMSELVES.</em></h2>
+      <p>Every event on this page is put on by volunteers. An hour at the concession stand or a shift at the fair booth is worth more than you'd think.</p>
+      <p style="margin-top:26px"><a class="btn btn-primary" href="about.html">Help At an Event</a></p>
     </div>
   </div>
 </section>
 
-<!-- SPORTS -->
+<!-- MORE WAYS TO FOLLOW -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">The Programs</p>
-    <h2 class="sec-title">EVERY TEAM WE <em>BACK</em></h2>
-    <div class="ways stagger" style="margin-top:44px">
-      <span class="way">Football</span>
-      <span class="way">Boys &amp; Girls Basketball</span>
-      <span class="way">Baseball</span>
-      <span class="way">Softball</span>
-      <span class="way">Volleyball</span>
-      <span class="way">Wrestling</span>
-      <span class="way">Cross Country</span>
-      <span class="way">Soccer</span>
-      <span class="way">Golf</span>
-      <span class="way">Track &amp; Field</span>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2>SEE YOU IN <em>THE STANDS.</em></h2>
-    <p>And if you're staying for the whole game anyway &mdash; we could use a hand at the concession stand.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="about.html">Volunteer With Us</a>
-      <a class="btn btn-ghost ext" href="https://www.facebook.com/sandwichsportsboosters" target="_blank" rel="noopener">Follow On Facebook</a>
+    <p class="eyebrow">Scores, Brackets &amp; Broadcasts</p>
+    <h2 class="sec-title">FOLLOW THE <em>SEASON</em></h2>
+    <div class="link-rows reveal" style="margin-top:44px">
+      <a class="link-row" href="https://www.maxpreps.com/il/sandwich/sandwich-indians/" target="_blank" rel="noopener">
+        <span class="lr-num">01</span>
+        <span class="lr-body"><h3>MAXPREPS</h3><p>Scores, rosters, and stats for every Sandwich team.</p></span>
+        <span class="lr-go">Open &#8599;</span>
+      </a>
+      <a class="link-row" href="https://www.ihsa.org/schools/details/1908" target="_blank" rel="noopener">
+        <span class="lr-num">02</span>
+        <span class="lr-body"><h3>IHSA</h3><p>State series brackets, assignments, and postseason results.</p></span>
+        <span class="lr-go">Open &#8599;</span>
+      </a>
+      <a class="link-row" href="https://www.nfhsnetwork.com/schools/sandwich-high-school-sandwich-il" target="_blank" rel="noopener">
+        <span class="lr-num">03</span>
+        <span class="lr-body"><h3>NFHS NETWORK</h3><p>Watch Sandwich events live or on demand.</p></span>
+        <span class="lr-go">Open &#8599;</span>
+      </a>
     </div>
   </div>
 </section>
@@ -514,7 +614,9 @@ footer ul li a:hover{color:var(--accent-soft)}
     <div class="foot-grid">
       <div class="footer-col">
         <a href="index.html" class="brand">
-          <img src="https://graph.facebook.com/138408359519417/picture?width=320&amp;height=320" alt="Sandwich Sports Boosters logo" onerror="this.onerror=null;this.src='img/logo.png';" />
+          <img src="img/logo.png" alt="Sandwich Sports Boosters logo" />
+      <!-- LOGO: transparent PNG sized for the dark background.
+           REPLACE WITH REAL LOGO: drop the club's cut-out S-arrow logo into img/logo.png -->
           <span class="bt">SANDWICH <span>SPORTS BOOSTERS</span></span>
         </a>
         <p>An all-volunteer club backing every sport and every student-athlete at Sandwich High School &mdash; over $115,000 given back to SHS athletics since 2023.</p>

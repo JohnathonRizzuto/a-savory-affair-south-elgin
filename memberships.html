@@ -369,6 +369,107 @@ footer ul li a:hover{color:var(--accent-soft)}
 .ext::after{content:"\2002\2197";font-weight:700}
 .two-up{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 @media(max-width:780px){.two-up{grid-template-columns:1fr}}
+
+/* ============ VARIED LAYOUT COMPONENTS (anti-cookie-cutter) ============ */
+
+/* full-bleed photo hero with dark overlay */
+.photo-hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:150px 0 90px}
+.photo-hero .bg{position:absolute;inset:0;z-index:0}
+.photo-hero .bg img{width:100%;height:100%;object-fit:cover}
+.photo-hero .bg.photo-ph{border:none}
+.photo-hero .scrim{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(180deg,rgba(13,11,9,.72) 0%,rgba(13,11,9,.58) 45%,rgba(13,11,9,.96) 100%),
+  radial-gradient(900px 500px at 78% 22%,rgba(255,122,26,.22),transparent 68%)}
+.photo-hero .wrap{position:relative;z-index:2}
+.hero-lockup{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.hero-lockup img.crest{width:min(210px,42vw);height:auto;filter:drop-shadow(0 22px 44px rgba(0,0,0,.8)) drop-shadow(0 0 40px rgba(255,122,26,.28));margin-bottom:8px}
+.hero-lockup h1{font-size:clamp(2.9rem,7.5vw,6rem);color:var(--text);text-shadow:0 6px 30px rgba(0,0,0,.6)}
+.hero-lockup h1 em{font-style:normal;color:var(--accent)}
+.hero-lockup .sub{font-size:clamp(1rem,2.2vw,1.35rem);color:var(--accent-soft);font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:10px}
+.hero-lockup .blurb{max-width:620px;color:#ddd2c4;font-size:1.1rem;margin-top:20px}
+.hero-lockup .btn-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+
+/* full-bleed photo band with text over it */
+.photo-band{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;padding:80px 0}
+.photo-band .bg{position:absolute;inset:0;z-index:0}
+.photo-band .bg img{width:100%;height:100%;object-fit:cover}
+.photo-band .bg.photo-ph{border:none}
+.photo-band .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(13,11,9,.94) 0%,rgba(13,11,9,.78) 48%,rgba(13,11,9,.45) 100%)}
+.photo-band .wrap{position:relative;z-index:2}
+.photo-band .inner{max-width:620px}
+.photo-band h2{font-size:clamp(2.1rem,4.6vw,3.4rem);color:var(--text)}
+.photo-band h2 em{font-style:normal;color:var(--accent)}
+.photo-band p{color:#ddd2c4;font-size:1.08rem;margin-top:16px}
+
+/* asymmetric alternating rows (no boxes) */
+.alt-row{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,68px);align-items:center}
+.alt-row.flip{grid-template-columns:.85fr 1.15fr}
+.alt-row.flip .alt-copy{order:2}
+.alt-row.flip .alt-art{order:1}
+.alt-copy h2{font-size:clamp(2rem,4.4vw,3.2rem);color:var(--text)}
+.alt-copy h2 em{font-style:normal;color:var(--accent)}
+.alt-copy p{color:var(--muted);font-size:1.06rem;margin-top:16px}
+.alt-copy p b{color:var(--text)}
+.alt-copy .kicker{font-size:12px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.alt-art{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;position:relative}
+.alt-art.tall{aspect-ratio:3/4}
+.alt-art img{width:100%;height:100%;object-fit:cover}
+/* offset accent frame behind the art */
+.alt-art-wrap{position:relative}
+.alt-art-wrap::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border:2px solid rgba(255,122,26,.4);border-radius:20px;z-index:0}
+.alt-art-wrap .alt-art{position:relative;z-index:1}
+
+/* photo mosaic — deliberately uneven */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px}
+.mosaic > *{border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);transition:.4s cubic-bezier(.16,1,.3,1)}
+.mosaic > *:hover{transform:scale(1.02);box-shadow:var(--shadow)}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic .w2{grid-column:span 2}
+.mosaic .h2{grid-row:span 2}
+
+/* giant single call-to-action link block */
+.big-link{display:block;position:relative;overflow:hidden;text-align:center;border-radius:22px;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent-deep) 100%);
+  color:#150b02;padding:clamp(40px,6vw,72px) 28px;box-shadow:0 26px 60px -24px rgba(255,122,26,.75);
+  transition:.35s cubic-bezier(.16,1,.3,1)}
+.big-link:hover{transform:translateY(-5px);box-shadow:0 34px 72px -22px rgba(255,122,26,.9)}
+.big-link::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transform:translateX(-130%);transition:.7s}
+.big-link:hover::after{transform:translateX(130%)}
+.big-link .bl-tag{font-size:11.5px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;opacity:.72}
+.big-link h2{font-size:clamp(2.3rem,6vw,4.4rem);margin-top:10px;color:#150b02}
+.big-link .bl-note{margin-top:14px;font-weight:700;font-size:1rem;opacity:.8}
+
+/* event rows — photo on top, no boxy card */
+.event-row{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(24px,4vw,52px);align-items:center;padding:clamp(28px,4vw,44px) 0;border-top:1px solid var(--line)}
+.event-row:first-child{border-top:none}
+.event-row.flip .ev-copy{order:2}
+.event-row.flip .ev-art{order:1}
+.ev-art{border-radius:16px;overflow:hidden;aspect-ratio:16/10;box-shadow:var(--shadow-sm)}
+.ev-art img{width:100%;height:100%;object-fit:cover}
+.ev-copy h3{font-size:clamp(1.8rem,3.6vw,2.7rem);color:var(--text)}
+.ev-copy .when{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(255,122,26,.4);border-radius:30px;padding:6px 15px;margin-bottom:14px}
+.ev-copy p{color:var(--muted);font-size:1.05rem;margin-top:12px}
+
+/* lightweight link rows (replaces identical card grids) */
+.link-rows{border-top:1px solid var(--line)}
+.link-row{display:flex;align-items:center;gap:26px;padding:26px 6px;border-bottom:1px solid var(--line);transition:.3s}
+.link-row:hover{background:rgba(255,122,26,.05);padding-left:16px}
+.link-row .lr-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:2rem;color:rgba(255,122,26,.4);min-width:44px}
+.link-row .lr-body{flex:1;min-width:0}
+.link-row h3{font-size:1.5rem;color:var(--text);letter-spacing:.04em}
+.link-row p{color:var(--muted);font-size:.98rem;margin-top:4px}
+.link-row .lr-go{color:var(--accent);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+
+@media(max-width:900px){
+  .alt-row,.alt-row.flip,.event-row,.event-row.flip{grid-template-columns:1fr;gap:28px}
+  .alt-row.flip .alt-copy,.alt-row.flip .alt-art,.event-row.flip .ev-copy,.event-row.flip .ev-art{order:unset}
+  .alt-art-wrap::before{display:none}
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}
+  .photo-band .scrim{background:linear-gradient(180deg,rgba(13,11,9,.86),rgba(13,11,9,.94))}
+  .link-row{gap:16px;padding:22px 4px}
+  .link-row .lr-num{font-size:1.5rem;min-width:32px}
+  .link-row .lr-go{display:none}
+}
 </style>
 </head>
 <body>
@@ -376,9 +477,9 @@ footer ul li a:hover{color:var(--accent-soft)}
 <header id="hdr">
   <div class="wrap nav">
     <a href="index.html" class="brand">
-      <!-- Live logo from the club's Facebook page; falls back to the local stand-in crest.
-           REPLACE WITH REAL LOGO FILE: drop the club's logo into img/logo.png to make it permanent. -->
-      <img src="https://graph.facebook.com/138408359519417/picture?width=320&amp;height=320" alt="Sandwich Sports Boosters logo" onerror="this.onerror=null;this.src='img/logo.png';" />
+      <img src="img/logo.png" alt="Sandwich Sports Boosters logo" />
+      <!-- LOGO: transparent PNG sized for the dark background.
+           REPLACE WITH REAL LOGO: drop the club's cut-out S-arrow logo into img/logo.png -->
       <span class="bt">SANDWICH <span>SPORTS BOOSTERS</span><small>Supporting SHS Athletics</small></span>
     </a>
     <nav class="nav-links" id="navLinks">
@@ -404,77 +505,44 @@ footer ul li a:hover{color:var(--accent-soft)}
   </div>
 </section>
 
-<!-- WHAT IT FUNDS -->
-<section style="padding-top:34px">
-  <div class="wrap">
-    <p class="eyebrow">What Your Membership Buys</p>
-    <h2 class="sec-title">DUES TURN INTO <em>EQUIPMENT</em></h2>
-    <p class="sec-sub">Not overhead, not admin &mdash; gear that shows up in the gym and on the field.</p>
-    <div class="pillars cols-3 stagger" style="margin-top:52px">
-      <div class="pillar"><div class="ic">&#127944;</div><h3>GEAR FOR EVERY SPORT</h3><p>Mats, machines, nets, cages &mdash; memberships helped buy all of it.</p></div>
-      <div class="pillar"><div class="ic">&#127891;</div><h3>SCHOLARSHIPS</h3><p>Support for SHS student-athletes heading to what's next.</p></div>
-      <div class="pillar"><div class="ic">&#127942;</div><h3>EVERY PROGRAM</h3><p>Your dues aren't tied to one team &mdash; they reach all SHS athletics.</p></div>
+<!-- WHAT DUES BUY -->
+<section style="padding-top:20px">
+  <div class="wrap alt-row flip">
+    <div class="alt-copy reveal">
+      <p class="kicker">What Your Membership Buys</p>
+      <h2>DUES TURN INTO <em>EQUIPMENT</em></h2>
+      <p>Not overhead, not admin &mdash; gear that shows up in the gym and on the field. Mats, machines, nets and cages were all bought with money that started as memberships.</p>
+      <p>Your dues also back <b>scholarships</b> for SHS student-athletes, and they aren't tied to one team &mdash; they reach every program.</p>
+    </div>
+    <div class="alt-art-wrap reveal">
+      <div class="alt-art photo-ph">
+        <!-- REPLACE WITH REAL PHOTO: equipment the boosters funded, or a team using it -->
+        <span class="cam">&#128247;</span><small>What Dues Buy</small>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- MEMBER PORTAL HANDOFF -->
+<!-- THE TWO ACTIONS -->
 <section class="band">
-  <div class="wrap" style="max-width:820px">
-    <!-- PORTAL LINK-OUT: points at the club's existing membership system.
-         VERIFY URL with the club before go-live — confirm this is the live membership signup page. -->
-    <a class="portal-card" href="https://sandwichsportsboosters.org/getinvolved" target="_blank" rel="noopener" style="display:block">
-      <span class="p-tag">Member Portal</span>
-      <h3>SIGN UP FOR MEMBERSHIP</h3>
-      <p>Memberships are handled in our member portal, where you can join, renew, and manage your account.</p>
-      <span class="btn btn-primary ext">Open the Member Portal</span>
-      <p class="portal-note">Opens in a new tab &mdash; this page will stay right here.</p>
-    </a>
-  </div>
-</section>
-
-<!-- QUESTIONS -->
-<section>
-  <div class="wrap two-up">
-    <div class="portal-card" style="text-align:left">
-      <span class="p-tag">Already a Member?</span>
-      <h3>RENEW OR MANAGE</h3>
-      <p style="margin-left:0">Sign in to the member portal to renew for the season or update your details.</p>
-      <a class="btn btn-ghost ext" href="https://sandwichsportsboosters.org/getinvolved" target="_blank" rel="noopener">Member Sign In</a>
-    </div>
-    <div class="portal-card" style="text-align:left">
-      <span class="p-tag">Questions First?</span>
-      <h3>ASK US ANYTHING</h3>
-      <p style="margin-left:0">Not sure which membership fits, or want to pay a different way? Just ask &mdash; a real person answers.</p>
-      <a class="btn btn-ghost" href="mailto:sandwichsportsboosters@gmail.com?subject=Membership">Email About Membership</a>
-    </div>
-  </div>
-</section>
-
-<!-- OTHER WAYS -->
-<section class="band">
-  <div class="wrap">
-    <p class="eyebrow">Not Ready to Join?</p>
-    <h2 class="sec-title">PLENTY OF OTHER <em>WAYS IN</em></h2>
-    <div class="ways stagger" style="margin-top:44px">
-      <span class="way">Sell raffle tickets</span>
-      <span class="way">Work a Sandwich Fair booth shift</span>
-      <span class="way">Run a concession stand shift</span>
-      <span class="way">Join a committee</span>
-      <span class="way">Sponsor as a business</span>
-    </div>
-    <p style="text-align:center;margin-top:38px"><a class="btn btn-ghost" href="about.html">See All the Ways to Help</a></p>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<section class="cta-band">
-  <div class="wrap">
-    <h2>ONE MEMBERSHIP. <em>EVERY TEAM.</em></h2>
-    <p>Join the families who keep Sandwich athletics funded year after year.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary ext" href="https://sandwichsportsboosters.org/getinvolved" target="_blank" rel="noopener">Become a Member</a>
-      <a class="btn btn-ghost" href="contact.html">Ask a Question</a>
+  <div class="wrap" style="max-width:900px">
+    <p class="eyebrow">Join Us</p>
+    <h2 class="sec-title">TWO WAYS TO <em>START</em></h2>
+    <div class="two-up reveal" style="margin-top:46px">
+      <!-- MEMBERSHIP PDF: replace href with the club's real membership details PDF -->
+      <a class="portal-card" href="#REPLACE-WITH-MEMBERSHIP-PDF-URL" target="_blank" rel="noopener" style="display:block">
+        <span class="p-tag">Read First</span>
+        <h3>MEMBERSHIP DETAILS</h3>
+        <p>Levels, benefits, and everything a membership covers.</p>
+        <span class="btn btn-ghost ext">View the PDF</span>
+      </a>
+      <!-- MEMBER SIGNUP: replace href with the club's real online store / signup URL -->
+      <a class="portal-card" href="#REPLACE-WITH-ONLINE-STORE-URL" target="_blank" rel="noopener" style="display:block">
+        <span class="p-tag">Ready to Join</span>
+        <h3>BECOME A MEMBER</h3>
+        <p>Sign up and pay in our online store.</p>
+        <span class="btn btn-primary ext">Become a Member</span>
+      </a>
     </div>
   </div>
 </section>
@@ -485,7 +553,9 @@ footer ul li a:hover{color:var(--accent-soft)}
     <div class="foot-grid">
       <div class="footer-col">
         <a href="index.html" class="brand">
-          <img src="https://graph.facebook.com/138408359519417/picture?width=320&amp;height=320" alt="Sandwich Sports Boosters logo" onerror="this.onerror=null;this.src='img/logo.png';" />
+          <img src="img/logo.png" alt="Sandwich Sports Boosters logo" />
+      <!-- LOGO: transparent PNG sized for the dark background.
+           REPLACE WITH REAL LOGO: drop the club's cut-out S-arrow logo into img/logo.png -->
           <span class="bt">SANDWICH <span>SPORTS BOOSTERS</span></span>
         </a>
         <p>An all-volunteer club backing every sport and every student-athlete at Sandwich High School &mdash; over $115,000 given back to SHS athletics since 2023.</p>
