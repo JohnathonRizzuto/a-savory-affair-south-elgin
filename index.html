@@ -538,6 +538,14 @@ footer ul li a:hover{color:var(--accent-soft)}
 .page-photo-hero .hero-lockup h1{font-size:clamp(2.4rem,5.2vw,3.9rem)}
 .page-photo-hero .bg img{object-position:center 55%}
 
+/* embedded Google Form — framed so the form's own light theme reads as a panel */
+.form-embed{max-width:760px;margin:30px auto 0;background:#fff;border:1px solid rgba(255,122,26,.55);
+  border-radius:18px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.95)}
+.form-embed iframe{display:block;width:100%;height:1408px;border:0}
+.embed-alt{text-align:center;margin-top:18px;color:var(--muted);font-size:.9rem}
+.embed-alt a{color:var(--accent);font-weight:700}
+@media(max-width:680px){.form-embed{border-radius:14px;margin-top:24px}.form-embed iframe{height:1560px}}
+
 /* ---- page-specific ---- */
 /* home is a menu: hero lockup + four buttons, nothing else */
 .home-menu-hero{min-height:100vh;padding:130px 0 80px;flex-direction:column;justify-content:center}
@@ -615,8 +623,7 @@ footer ul li a:hover{color:var(--accent-soft)}
       <a class="menu-btn" href="https://shs.sandwich430.org/athletics-home" target="_blank" rel="noopener">
         <span>SHS SPORTS SCHEDULES</span>
       </a>
-      <!-- COACHES REQUEST FORM: replace href with the club's real Google Form URL -->
-      <a class="menu-btn wide" href="#REPLACE-WITH-COACHES-GOOGLE-FORM" target="_blank" rel="noopener">
+      <a class="menu-btn wide" href="https://forms.gle/WtNHjXzYnfDySyiv5" target="_blank" rel="noopener">
         <span>COACHES REQUEST FORM</span>
       </a>
     </nav>
