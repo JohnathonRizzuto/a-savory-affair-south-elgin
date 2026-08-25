@@ -477,7 +477,7 @@ footer ul li a:hover{color:var(--accent-soft)}
 <header id="hdr">
   <div class="wrap nav">
     <a href="index.html" class="brand">
-      <img src="img/logo.png" alt="Sandwich Sports Boosters logo" />
+      <img src="img/logo.png" data-real-logo alt="Sandwich Sports Boosters logo" />
       <!-- LOGO: transparent PNG sized for the dark background.
            REPLACE WITH REAL LOGO: drop the club's cut-out S-arrow logo into img/logo.png -->
       <span class="bt">SANDWICH <span>SPORTS BOOSTERS</span><small>Supporting SHS Athletics</small></span>
@@ -659,7 +659,7 @@ footer ul li a:hover{color:var(--accent-soft)}
     <div class="foot-grid">
       <div class="footer-col">
         <a href="index.html" class="brand">
-          <img src="img/logo.png" alt="Sandwich Sports Boosters logo" />
+          <img src="img/logo.png" data-real-logo alt="Sandwich Sports Boosters logo" />
       <!-- LOGO: transparent PNG sized for the dark background.
            REPLACE WITH REAL LOGO: drop the club's cut-out S-arrow logo into img/logo.png -->
           <span class="bt">SANDWICH <span>SPORTS BOOSTERS</span></span>
@@ -714,6 +714,71 @@ nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
 document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
 document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+<script>
+/* Real club logo, cropped for the dark background.
+   The club's logo art sits on a white square. This loads it, floods in from the
+   edges removing only the white that touches the border (so white INSIDE the mark
+   is kept), and swaps in the transparent result. If anything fails — offline,
+   CORS, a blocked request — the local crest that's already in the <img> stays. */
+(function () {
+  var REAL_LOGO = 'https://graph.facebook.com/138408359519417/picture?width=720&height=720';
+  var targets = document.querySelectorAll('img[data-real-logo]');
+  if (!targets.length) return;
+
+  var src = new Image();
+  src.crossOrigin = 'anonymous';
+  src.onload = function () {
+    try {
+      var w = src.naturalWidth, h = src.naturalHeight;
+      if (!w || !h) return;
+      var c = document.createElement('canvas');
+      c.width = w; c.height = h;
+      var ctx = c.getContext('2d');
+      ctx.drawImage(src, 0, 0);
+      var img = ctx.getImageData(0, 0, w, h);   // throws if the canvas is tainted
+      var d = img.data;
+
+      var NEAR_WHITE = 232;
+      var isWhite = function (i) { return d[i] >= NEAR_WHITE && d[i+1] >= NEAR_WHITE && d[i+2] >= NEAR_WHITE; };
+
+      // flood fill inward from every border pixel
+      var seen = new Uint8Array(w * h);
+      var stack = [];
+      for (var x = 0; x < w; x++) { stack.push(x, 0, x, h - 1); }
+      for (var y = 0; y < h; y++) { stack.push(0, y, w - 1, y); }
+      while (stack.length) {
+        var py = stack.pop(), px = stack.pop();
+        if (px < 0 || py < 0 || px >= w || py >= h) continue;
+        var p = py * w + px;
+        if (seen[p]) continue;
+        var i = p * 4;
+        if (!isWhite(i)) continue;
+        seen[p] = 1;
+        d[i + 3] = 0;
+        stack.push(px + 1, py, px - 1, py, px, py + 1, px, py - 1);
+      }
+
+      // soften the halo left on anti-aliased edges next to cleared pixels
+      for (var yy = 1; yy < h - 1; yy++) {
+        for (var xx = 1; xx < w - 1; xx++) {
+          var q = yy * w + xx, j = q * 4;
+          if (seen[q] || d[j + 3] === 0) continue;
+          if (seen[q - 1] || seen[q + 1] || seen[q - w] || seen[q + w]) {
+            var lightest = Math.min(d[j], d[j + 1], d[j + 2]);
+            if (lightest > 150) d[j + 3] = Math.round(255 * (232 - lightest) / 82);
+          }
+        }
+      }
+
+      ctx.putImageData(img, 0, 0);
+      var out = c.toDataURL('image/png');
+      targets.forEach(function (el) { el.src = out; });
+    } catch (e) { /* tainted canvas or blocked — keep the crest already showing */ }
+  };
+  src.onerror = function () { /* keep the crest */ };
+  src.src = REAL_LOGO;
+})();
 </script>
 
 <!-- ===========================================================================
