@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://a-savory-affair-south-elgin.vercel.app/sitemap.xml
+Sitemap: https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/sitemap.xml
