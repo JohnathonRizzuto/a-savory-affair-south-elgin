@@ -497,6 +497,24 @@ footer ul li a:hover{color:var(--accent-soft)}
 /* keep the subject in frame when a photo is cropped hard */
 .mosaic img.fit-low{object-position:center 78%}
 .mosaic img.fit-top{object-position:center 42%}
+
+/* membership tiers */
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.mem-card{background:linear-gradient(160deg,var(--card-soft),var(--card));border:1px solid var(--line);
+  border-radius:18px;padding:30px 28px 32px;box-shadow:var(--shadow-sm);transition:.35s cubic-bezier(.16,1,.3,1)}
+.mem-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(255,122,26,.5)}
+.mem-card.gold{border-color:rgba(255,122,26,.55);background:linear-gradient(160deg,rgba(255,122,26,.14),transparent 52%),var(--card)}
+.mem-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding-bottom:16px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.mem-tag{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.7rem;letter-spacing:.06em;color:var(--text)}
+.mem-card.gold .mem-tag{color:var(--accent)}
+.mem-price{font-family:'Bebas Neue',Impact,sans-serif;font-size:2.4rem;line-height:1;color:var(--accent);
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum","tnum";letter-spacing:0}
+.mem-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.mem-list li{position:relative;padding-left:26px;color:var(--muted);font-size:.99rem;line-height:1.6}
+.mem-list li::before{content:"\2605";position:absolute;left:0;top:1px;color:var(--accent);font-size:.85rem}
+.mem-list li b{color:var(--text)}
+.mem-note{max-width:760px;margin:26px auto 0;text-align:center;color:var(--muted);font-size:.92rem;font-style:italic}
+@media(max-width:780px){.mem-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -525,47 +543,48 @@ footer ul li a:hover{color:var(--accent-soft)}
 <section class="page-hero">
   <div class="wrap">
     <p class="eyebrow">Memberships</p>
-    <h1>BACK THE TEAMS <em>ALL YEAR</em></h1>
-    <p class="lede">The simplest way to support Sandwich athletics. Annual membership contributions go straight into equipment and supplies for every SHS athletic program.</p>
+    <h1>BECOME A <em>MEMBER</em></h1>
+    <p class="lede">Two ways to join. Both come with a vote on who fills our board seats, and both put you behind every sport at Sandwich High School.</p>
   </div>
 </section>
 
-<!-- WHAT DUES BUY -->
-<section style="padding-top:20px">
-  <div class="wrap alt-row flip">
-    <div class="alt-copy reveal">
-      <p class="kicker">What Your Membership Buys</p>
-      <h2>DUES TURN INTO <em>EQUIPMENT</em></h2>
-      <p>Not overhead, not admin &mdash; gear that shows up in the gym and on the field. Mats, machines, nets and cages were all bought with money that started as memberships.</p>
-      <p>Your dues also back <b>scholarships</b> for SHS student-athletes, and they aren't tied to one team &mdash; they reach every program.</p>
-    </div>
-    <div class="alt-art-wrap reveal">
-      <div class="alt-art"><img src="img/photo-wrestling2.jpg" alt="Sandwich wrestling" /></div>
-    </div>
-  </div>
-</section>
+<!-- THE TWO MEMBERSHIPS -->
+<section style="padding-top:8px">
+  <div class="wrap" style="max-width:1000px">
+    <div class="mem-grid reveal">
 
-<!-- THE TWO ACTIONS -->
-<section class="band">
-  <div class="wrap" style="max-width:900px">
-    <p class="eyebrow">Join Us</p>
-    <h2 class="sec-title">TWO WAYS TO <em>START</em></h2>
-    <div class="two-up reveal" style="margin-top:46px">
-      <!-- MEMBERSHIP PDF: replace href with the club's real membership details PDF -->
-      <a class="portal-card" href="#REPLACE-WITH-MEMBERSHIP-PDF-URL" target="_blank" rel="noopener" style="display:block">
-        <span class="p-tag">Read First</span>
-        <h3>MEMBERSHIP DETAILS</h3>
-        <p>Levels, benefits, and everything a membership covers.</p>
-        <span class="btn btn-ghost ext">View the PDF</span>
-      </a>
-      <!-- MEMBER SIGNUP: the club's digital-services store.
-           VERIFY: confirm memberships are sold here and not on a separate page. -->
-      <a class="portal-card" href="https://sandwichsportsboosters.org/digital-services" target="_blank" rel="noopener" style="display:block">
-        <span class="p-tag">Ready to Join</span>
-        <h3>BECOME A MEMBER</h3>
-        <p>Sign up and pay in our online store.</p>
-        <span class="btn btn-primary ext">Become a Member</span>
-      </a>
+      <article class="mem-card gold">
+        <div class="mem-head">
+          <span class="mem-tag">Gold Booster</span>
+          <div class="mem-price">$40</div>
+        </div>
+        <ul class="mem-list">
+          <li><b>Direct your fee to a sport.</b> Fulfil one qualifying volunteer slot &mdash; a JV or Varsity football game, or one shift in the Sandwich Fair booth &mdash; and your $40 goes to the sport you choose.</li>
+          <li><b>2 Booster Event Passes.</b> Free access to two home SHS athletic events of your choosing. Excludes post-season play.</li>
+          <li><b>Earn more passes.</b> Volunteer at more than one booster event to earn additional passes &mdash; one pass per volunteer slot.</li>
+          <li><b>Voting privileges</b> on filling Sandwich Boosters board positions.</li>
+          <li><b>Express concessions line.</b> Access to the Gold Member Express Concessions Line at home football games when available. Member card required.</li>
+        </ul>
+      </article>
+
+      <article class="mem-card">
+        <div class="mem-head">
+          <span class="mem-tag">Basic Booster</span>
+          <div class="mem-price">FREE</div>
+        </div>
+        <ul class="mem-list">
+          <li><b>No fee.</b> Basic Membership begins the first time you volunteer.</li>
+          <li><b>Earn Booster Event Passes.</b> Volunteer at more than one booster event to earn passes &mdash; one pass gets you free access to one home SHS athletic event. Excludes post-season play.</li>
+          <li><b>Voting privileges</b> on filling Sandwich Boosters board positions.</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <p class="mem-note reveal">Volunteering isn't required, but it's encouraged. If you choose not to volunteer you can't direct your membership fee to a sport &mdash; you still get every other benefit.</p>
+
+    <div style="text-align:center;margin-top:34px">
+      <a class="btn btn-primary ext" href="https://sandwichsportsboosters.org/digital-services" target="_blank" rel="noopener">Become a Member</a>
     </div>
   </div>
 </section>

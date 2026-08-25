@@ -497,6 +497,24 @@ footer ul li a:hover{color:var(--accent-soft)}
 /* keep the subject in frame when a photo is cropped hard */
 .mosaic img.fit-low{object-position:center 78%}
 .mosaic img.fit-top{object-position:center 42%}
+
+/* membership tiers */
+.mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.mem-card{background:linear-gradient(160deg,var(--card-soft),var(--card));border:1px solid var(--line);
+  border-radius:18px;padding:30px 28px 32px;box-shadow:var(--shadow-sm);transition:.35s cubic-bezier(.16,1,.3,1)}
+.mem-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(255,122,26,.5)}
+.mem-card.gold{border-color:rgba(255,122,26,.55);background:linear-gradient(160deg,rgba(255,122,26,.14),transparent 52%),var(--card)}
+.mem-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding-bottom:16px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.mem-tag{font-family:'Bebas Neue',Impact,sans-serif;font-size:1.7rem;letter-spacing:.06em;color:var(--text)}
+.mem-card.gold .mem-tag{color:var(--accent)}
+.mem-price{font-family:'Bebas Neue',Impact,sans-serif;font-size:2.4rem;line-height:1;color:var(--accent);
+  font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum","tnum";letter-spacing:0}
+.mem-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.mem-list li{position:relative;padding-left:26px;color:var(--muted);font-size:.99rem;line-height:1.6}
+.mem-list li::before{content:"\2605";position:absolute;left:0;top:1px;color:var(--accent);font-size:.85rem}
+.mem-list li b{color:var(--text)}
+.mem-note{max-width:760px;margin:26px auto 0;text-align:center;color:var(--muted);font-size:.92rem;font-style:italic}
+@media(max-width:780px){.mem-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
