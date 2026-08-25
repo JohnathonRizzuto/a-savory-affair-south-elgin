@@ -488,6 +488,11 @@ footer ul li a:hover{color:var(--accent-soft)}
 .feature-tile .ft-go::after{content:"\2002\2197"}
 .feature-tile.internal .ft-go::after{content:"\2002\2192"}
 @media(max-width:780px){.feature-grid{grid-template-columns:1fr}}
+
+/* about: plain readable copy block */
+.about-copy p{color:var(--muted);font-size:clamp(1.08rem,1.6vw,1.22rem);line-height:1.75}
+.about-copy p + p{margin-top:20px}
+.about-copy p b{color:var(--text)}
 </style>
 </head>
 <body>
@@ -502,7 +507,7 @@ footer ul li a:hover{color:var(--accent-soft)}
     </a>
     <nav class="nav-links" id="navLinks">
       <a class="lk" href="index.html">Home</a>
-      <a class="lk" href="events.html">Events</a>
+      <a class="lk" href="events.html">Schedules</a>
       <a class="lk active" aria-current="page" href="about.html">About Us</a>
       <a class="lk" href="sponsorship.html">Sponsorship</a>
       <a class="lk" href="memberships.html">Memberships</a>
@@ -519,73 +524,26 @@ footer ul li a:hover{color:var(--accent-soft)}
   <div class="wrap">
     <p class="eyebrow">About Us</p>
     <h1>THE TEAM BEHIND <em>OUR TEAMS</em></h1>
-    <p class="lede">We're an all-volunteer booster club supporting every sport and every student-athlete at Sandwich High School &mdash; parents, neighbors, and local businesses pulling in the same direction.</p>
   </div>
 </section>
 
-<!-- STATS -->
-<section style="padding-top:34px">
-  <div class="wrap">
-    <div class="stats stagger" style="grid-template-columns:repeat(2,1fr);max-width:760px;margin-inline:auto">
-      <div class="stat-item"><div class="num">$115K+</div><div class="lbl">Back into SHS athletics since 2023</div></div>
-      <div class="stat-item"><div class="num">$79K+</div><div class="lbl">Donated since May 2024 alone</div></div>
+<!-- WHO WE ARE -->
+<section style="padding-top:8px">
+  <div class="wrap" style="max-width:900px">
+    <div class="about-copy reveal">
+      <p>The Sandwich Sports Boosters are a nonprofit, all-volunteer club supporting every sport and every student-athlete at Sandwich High School. We're parents, grandparents, neighbors and local businesses &mdash; nobody here draws a paycheck, and every dollar raised goes back to SHS athletics.</p>
+      <p>What the community raises at our events, our Sandwich Fair booth and our concession stand buys the equipment school budgets don't cover, funds scholarships for our student-athletes, and provides the Sportsmanship award for every sport at SHS. Since 2023 that's added up to more than <b>$115,000 back into Sandwich High School athletics</b>.</p>
     </div>
-  </div>
-</section>
 
-<!-- FUNDED LIST -->
-<section class="band">
-  <div class="wrap">
-    <p class="eyebrow">The Full List</p>
-    <h2 class="sec-title">BOUGHT AND <em>PAID FOR</em></h2>
-    <p class="sec-sub">Recent projects funded by boosters dollars, across every corner of SHS athletics.</p>
-    <div class="link-rows reveal" style="margin-top:44px">
-      <div class="link-row"><span class="lr-num">01</span><span class="lr-body"><h3>$40,000 MAIN GYM PROJECTOR</h3><p>A full digital projector system for the Main Gym &mdash; our biggest single investment, funded entirely by boosters fundraising.</p></span></div>
-      <div class="link-row"><span class="lr-num">02</span><span class="lr-body"><h3>WRESTLING MATS</h3><p>New mats for the wrestling program.</p></span></div>
-      <div class="link-row"><span class="lr-num">03</span><span class="lr-body"><h3>BASEBALL BACKSTOP CAGE</h3><p>A new backstop cage for the diamond.</p></span></div>
-      <div class="link-row"><span class="lr-num">04</span><span class="lr-body"><h3>SOFTBALL PITCHING MACHINE</h3><p>Reps on demand for the softball program.</p></span></div>
-      <div class="link-row"><span class="lr-num">05</span><span class="lr-body"><h3>VOLLEYBALL NETTING SYSTEM</h3><p>A new netting system for the volleyball program.</p></span></div>
-      <div class="link-row"><span class="lr-num">06</span><span class="lr-body"><h3>GYM BANNERS</h3><p>Banners that make the gym feel like home.</p></span></div>
-      <div class="link-row"><span class="lr-num">07</span><span class="lr-body"><h3>SIDELINE GYM CHAIRS</h3><p>$3,760 in new chairs &mdash; basketball, volleyball, wrestling and special events.</p></span></div>
-      <div class="link-row"><span class="lr-num">08</span><span class="lr-body"><h3>SPORTSMANSHIP AWARDS</h3><p>Provided for every sport at SHS, every season.</p></span></div>
-      <div class="link-row"><span class="lr-num">09</span><span class="lr-body"><h3>SCHOLARSHIPS</h3><p>Support for SHS student-athletes beyond graduation.</p></span></div>  </div>
-</section>
-
-<!-- BOARD -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow">The Board</p>
-    <h2 class="sec-title">TWO SEATS ARE <em>OPEN RIGHT NOW</em></h2>
-    <p class="sec-sub">This club is run entirely by volunteers &mdash; and we have room at the table.</p>
-    <div class="board-grid stagger" style="margin-top:48px">
-      <div class="board-card"><div class="role">President</div><div class="who">Jackie Cline</div></div>
-      <div class="board-card"><div class="role">Treasurer</div><div class="who">Holly Michael</div></div>
-      <div class="board-card open"><div class="role">Secretary</div><div class="who">Open &mdash; could be you</div></div>
-      <div class="board-card open"><div class="role">Event Director</div><div class="who">Open &mdash; could be you</div></div>
-      <div class="board-card"><div class="role">Fair Booth Director</div><div class="who">Jamie Shumway</div></div>
-      <div class="board-card"><div class="role">Communications (Interim)</div><div class="who">Holly Michael</div></div>
-      <div class="board-card"><div class="role">Concessions Director</div><div class="who">Kelly McDuffee</div></div>
-      <div class="board-card" style="display:flex;align-items:center;justify-content:center"><a class="btn btn-primary" href="mailto:sandwichsportsboosters@gmail.com?subject=Open%20Board%20Seat" style="animation:none">Claim a Seat</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- COMMITTEES -->
-<section class="band">
-  <div class="wrap">
-    <p class="eyebrow">Get Involved</p>
-    <h2 class="sec-title">PICK YOUR <em>LANE</em></h2>
-    <p class="sec-sub">Eight volunteer committees run everything the Boosters do.</p>
-    <div class="committee-grid stagger" style="margin-top:52px">
-      <div class="committee-card"><h3>SPONSORSHIP</h3><p>Connect local businesses with the teams their customers cheer for.</p></div>
-      <div class="committee-card"><h3>EVENTS</h3><p>Run Poker Night, the Block Party, and whatever we dream up next.</p></div>
-      <div class="committee-card"><h3>MEMBERSHIP</h3><p>Grow the roster of families whose annual contributions fund the equipment.</p></div>
-      <div class="committee-card"><h3>FAIR BOOTH</h3><p>Staff and stock our booth at the Sandwich Fair &mdash; the busiest week of the year.</p></div>
-      <div class="committee-card"><h3>SCHOLARSHIP</h3><p>Put boosters dollars behind SHS student-athletes' next step.</p></div>
-      <div class="committee-card"><h3>CONCESSIONS</h3><p>Keep the stand moving on game nights &mdash; every sale funds the programs.</p></div>
-      <div class="committee-card"><h3>COMMUNICATION</h3><p>Keep the town in the loop &mdash; Facebook, Instagram, and everything in between.</p></div>
-      <div class="committee-card"><h3>PARENT REPS</h3><p>Be the bridge between your athlete's team and the Boosters.</p></div>
-      <div class="committee-card idea"><h3>YOUR IDEA HERE</h3><p>Have a committee we haven't thought of? Pitch it &mdash; we're listening.</p><p style="margin-top:14px"><a class="event-link" href="mailto:sandwichsportsboosters@gmail.com?subject=New%20Committee%20Idea">Suggest a committee</a></p></div>
+    <div class="mosaic reveal" style="margin-top:44px">
+      <!-- REPLACE WITH REAL PHOTO: team or game action -->
+      <div class="w2 h2 photo-ph"><span class="cam">&#128247;</span><small>Photo</small></div>
+      <!-- REPLACE WITH REAL PHOTO: volunteers at the fair booth -->
+      <div class="photo-ph"><span class="cam">&#128247;</span><small>Photo</small></div>
+      <!-- REPLACE WITH REAL PHOTO: game action -->
+      <div class="photo-ph"><span class="cam">&#128247;</span><small>Photo</small></div>
+      <!-- REPLACE WITH REAL PHOTO: the crowd / student section -->
+      <div class="w2 photo-ph"><span class="cam">&#128247;</span><small>Photo</small></div>
     </div>
   </div>
 </section>
@@ -611,7 +569,7 @@ footer ul li a:hover{color:var(--accent-soft)}
       <div class="footer-col">
         <h5>Explore</h5>
         <ul>
-          <li><a href="events.html">Events &amp; Schedules</a></li>
+          <li><a href="events.html">Schedules</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="sponsorship.html">Sponsorship</a></li>
           <li><a href="memberships.html">Memberships</a></li>

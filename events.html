@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Events & Schedules | Sandwich Sports Boosters</title>
-<meta name="description" content="Poker Night, the Block Party, and our Sandwich Fair booth — plus every SHS athletic schedule in one place: district calendars, IHSA, MaxPreps and NFHS Network." />
+<title>Schedules | Sandwich Sports Boosters</title>
+<meta name="description" content="Every Sandwich High School athletic schedule in one place — the school's official schedules plus MaxPreps, IHSA and NFHS Network." />
 <!-- GO-LIVE: update domain across canonical/OG/JSON-LD when the club's real domain points here -->
 <link rel="canonical" href="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/events.html" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -15,8 +15,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/events.html" />
-<meta property="og:title" content="Events & Schedules | Sandwich Sports Boosters" />
-<meta property="og:description" content="Booster fundraisers and every Indians game day, all on one page." />
+<meta property="og:title" content="SHS Sports Schedules | Sandwich Sports Boosters" />
+<meta property="og:description" content="Every Indians team, every game." />
 <meta property="og:image" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/img/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -26,8 +26,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Events & Schedules | Sandwich Sports Boosters" />
-<meta name="twitter:description" content="Booster fundraisers and every Indians game day, all on one page." />
+<meta name="twitter:title" content="SHS Sports Schedules | Sandwich Sports Boosters" />
+<meta name="twitter:description" content="Every Indians team, every game." />
 <meta name="twitter:image" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/img/og-image.jpg" />
 
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
@@ -488,6 +488,11 @@ footer ul li a:hover{color:var(--accent-soft)}
 .feature-tile .ft-go::after{content:"\2002\2197"}
 .feature-tile.internal .ft-go::after{content:"\2002\2192"}
 @media(max-width:780px){.feature-grid{grid-template-columns:1fr}}
+
+/* about: plain readable copy block */
+.about-copy p{color:var(--muted);font-size:clamp(1.08rem,1.6vw,1.22rem);line-height:1.75}
+.about-copy p + p{margin-top:20px}
+.about-copy p b{color:var(--text)}
 </style>
 </head>
 <body>
@@ -502,7 +507,7 @@ footer ul li a:hover{color:var(--accent-soft)}
     </a>
     <nav class="nav-links" id="navLinks">
       <a class="lk" href="index.html">Home</a>
-      <a class="lk active" aria-current="page" href="events.html">Events</a>
+      <a class="lk active" aria-current="page" href="events.html">Schedules</a>
       <a class="lk" href="about.html">About Us</a>
       <a class="lk" href="sponsorship.html">Sponsorship</a>
       <a class="lk" href="memberships.html">Memberships</a>
@@ -517,93 +522,34 @@ footer ul li a:hover{color:var(--accent-soft)}
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="wrap">
-    <p class="eyebrow">Events &amp; Schedules</p>
-    <h1>GAME DAYS &amp; <em>GOOD TIMES</em></h1>
-    <p class="lede">Where the Indians are playing next, and the fundraisers that keep every program funded.</p>
+    <p class="eyebrow">Schedules</p>
+    <h1>SANDWICH SPORTS <em>SCHEDULES</em></h1>
+    <p class="lede">Every Indians team, every game &mdash; straight from the sources that keep them current.</p>
   </div>
 </section>
 
-<!-- BIG SCHEDULES BUTTON — the centerpiece -->
-<section style="padding-top:20px">
+<!-- SCHEDULES -->
+<section style="padding-top:8px">
   <div class="wrap" style="max-width:920px">
     <!-- SCHEDULES LINK: the club's old athletics.sandwichk12.org link is dead.
          VERIFY with the club that this is the right live schedules page. -->
     <a class="big-link reveal" href="https://shs.sandwich430.org/athletics-home" target="_blank" rel="noopener">
       <div class="bl-tag">Sandwich High School</div>
       <h2>SHS SPORTS SCHEDULES</h2>
-      <div class="bl-note">Every team, every game &mdash; straight from the school &nbsp;&#8599;</div>
+      <div class="bl-note">Every team, every game &nbsp;&#8599;</div>
     </a>
-  </div>
-</section>
 
-<!-- UPCOMING EVENTS -->
-<section class="band">
-  <div class="wrap">
-    <p class="eyebrow">Save the Date</p>
-    <h2 class="sec-title">UPCOMING <em>EVENTS</em></h2>
-    <p class="sec-sub">The fundraisers our whole town shows up for.</p>
-    <div style="margin-top:46px">
-<!-- EVENTS:BEGIN — auto-managed region. A future update pipeline regenerates ONLY the
-     markup between these two markers. Keep styles and scripts out of this region. -->
-<div id="upcoming-events">
-  <article class="event-row" data-event-id="poker-night">
-    <div class="ev-art photo-ph">
-      <!-- REPLACE WITH REAL PHOTO: Poker Night -->
-      <span class="cam">&#128247;</span><small>Poker Night</small>
-    </div>
-    <div class="ev-copy">
-      <span class="when">Date To Be Announced</span>
-      <h3>POKER NIGHT FUNDRAISER</h3>
-      <p>A community poker night for SHS sports &mdash; all skill levels welcome, friendly competition, and every dollar goes straight back to the teams.</p>
-    </div>
-  </article>
-  <article class="event-row flip" data-event-id="block-party">
-    <div class="ev-art photo-ph">
-      <!-- REPLACE WITH REAL PHOTO: Block Party -->
-      <span class="cam">&#128247;</span><small>Block Party</small>
-    </div>
-    <div class="ev-copy">
-      <span class="when">Date To Be Announced</span>
-      <h3>BLOCK PARTY</h3>
-      <p>Thrown together with the SHS Football Team, the Junior Class, and SYTF &mdash; a whole-town party with a purpose.</p>
-    </div>
-  </article>
-  <article class="event-row" data-event-id="fair-booth">
-    <div class="ev-art photo-ph">
-      <!-- REPLACE WITH REAL PHOTO: Sandwich Fair booth -->
-      <span class="cam">&#128247;</span><small>Sandwich Fair Booth</small>
-    </div>
-    <div class="ev-copy">
-      <span class="when">Sandwich Fair Week</span>
-      <h3>SANDWICH FAIR BOOTH</h3>
-      <p>Our booth at the Sandwich Fair, staffed start to finish by volunteers. Stop by, say hi, and fuel the Indians.</p>
-    </div>
-  </article>
-</div>
-<!-- EVENTS:END -->
-    </div>
-  </div>
-</section>
-
-<!-- MORE WAYS TO FOLLOW -->
-<section>
-  <div class="wrap">
-    <p class="eyebrow">Scores, Brackets &amp; Broadcasts</p>
-    <h2 class="sec-title">FOLLOW THE <em>SEASON</em></h2>
-    <div class="link-rows reveal" style="margin-top:44px">
+    <div class="link-rows reveal" style="margin-top:34px">
       <a class="link-row" href="https://www.maxpreps.com/il/sandwich/sandwich-indians/" target="_blank" rel="noopener">
-        <span class="lr-num">01</span>
-        <span class="lr-body"><h3>MAXPREPS</h3><p>Scores, rosters, and stats for every Sandwich team.</p></span>
+        <span class="lr-body"><h3>MAXPREPS</h3><p>Scores, rosters and stats.</p></span>
         <span class="lr-go">Open &#8599;</span>
       </a>
       <a class="link-row" href="https://www.ihsa.org/schools/details/1908" target="_blank" rel="noopener">
-        <span class="lr-num">02</span>
-        <span class="lr-body"><h3>IHSA</h3><p>State series brackets, assignments, and postseason results.</p></span>
+        <span class="lr-body"><h3>IHSA</h3><p>State series brackets and results.</p></span>
         <span class="lr-go">Open &#8599;</span>
       </a>
       <a class="link-row" href="https://www.nfhsnetwork.com/schools/sandwich-high-school-sandwich-il" target="_blank" rel="noopener">
-        <span class="lr-num">03</span>
-        <span class="lr-body"><h3>NFHS NETWORK</h3><p>Watch Sandwich events live or on demand.</p></span>
+        <span class="lr-body"><h3>NFHS NETWORK</h3><p>Watch live or on demand.</p></span>
         <span class="lr-go">Open &#8599;</span>
       </a>
     </div>
@@ -631,7 +577,7 @@ footer ul li a:hover{color:var(--accent-soft)}
       <div class="footer-col">
         <h5>Explore</h5>
         <ul>
-          <li><a href="events.html">Events &amp; Schedules</a></li>
+          <li><a href="events.html">Schedules</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="sponsorship.html">Sponsorship</a></li>
           <li><a href="memberships.html">Memberships</a></li>

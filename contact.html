@@ -488,6 +488,11 @@ footer ul li a:hover{color:var(--accent-soft)}
 .feature-tile .ft-go::after{content:"\2002\2197"}
 .feature-tile.internal .ft-go::after{content:"\2002\2192"}
 @media(max-width:780px){.feature-grid{grid-template-columns:1fr}}
+
+/* about: plain readable copy block */
+.about-copy p{color:var(--muted);font-size:clamp(1.08rem,1.6vw,1.22rem);line-height:1.75}
+.about-copy p + p{margin-top:20px}
+.about-copy p b{color:var(--text)}
 </style>
 </head>
 <body>
@@ -502,7 +507,7 @@ footer ul li a:hover{color:var(--accent-soft)}
     </a>
     <nav class="nav-links" id="navLinks">
       <a class="lk" href="index.html">Home</a>
-      <a class="lk" href="events.html">Events</a>
+      <a class="lk" href="events.html">Schedules</a>
       <a class="lk" href="about.html">About Us</a>
       <a class="lk" href="sponsorship.html">Sponsorship</a>
       <a class="lk" href="memberships.html">Memberships</a>
@@ -597,7 +602,7 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
       <div class="footer-col">
         <h5>Explore</h5>
         <ul>
-          <li><a href="events.html">Events &amp; Schedules</a></li>
+          <li><a href="events.html">Schedules</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="sponsorship.html">Sponsorship</a></li>
           <li><a href="memberships.html">Memberships</a></li>
