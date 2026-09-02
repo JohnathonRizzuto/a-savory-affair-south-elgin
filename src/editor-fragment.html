@@ -67,7 +67,7 @@
 
   var GH_OWNER = 'JohnathonRizzuto';
   var GH_REPO = 'a-savory-affair-south-elgin';
-  var GH_BRANCH = 'claude/sandwich-sports-boosters-site-30gy04'; // GO-LIVE: change to production branch
+  var GH_BRANCH = 'master'; // production branch -- Vercel deploys from here
   var GH_FILE = location.pathname.replace(/^\/+/, '') || 'index.html';
   if (GH_FILE.slice(-1) === '/') GH_FILE += 'index.html';
   if (!/\.html$/.test(GH_FILE)) GH_FILE += '.html';
