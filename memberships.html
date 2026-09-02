@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Memberships | Sandwich Sports Boosters</title>
-<meta name="description" content="Annual Sandwich Sports Boosters memberships fund equipment and supplies for every SHS athletic program. Join the families backing the Indians." />
+<meta name="description" content="Sandwich Sports Boosters membership is free. Volunteer one shift at a booster event to join, earn passes to home SHS games, and vote on board positions." />
 <!-- GO-LIVE: update domain across canonical/OG/JSON-LD when the club's real domain points here -->
 <link rel="canonical" href="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/memberships.html" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/memberships.html" />
 <meta property="og:title" content="Become a Member | Sandwich Sports Boosters" />
-<meta property="og:description" content="Annual memberships that buy real equipment for SHS teams." />
+<meta property="og:description" content="Free membership. Volunteer one shift and you are in." />
 <meta property="og:image" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/img/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -27,7 +27,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Become a Member | Sandwich Sports Boosters" />
-<meta name="twitter:description" content="Annual memberships that buy real equipment for SHS teams." />
+<meta name="twitter:description" content="Free membership. Volunteer one shift and you are in." />
 <meta name="twitter:image" content="https://a-savory-affair-south-elgin-git-claude-sandwich-55080d-rizzuto.vercel.app/img/og-image.jpg" />
 
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
@@ -499,23 +499,25 @@ footer ul li a:hover{color:var(--accent-soft)}
   background:linear-gradient(120deg,var(--card-soft),var(--card));border:1px solid var(--line);
   border-radius:18px;padding:30px 34px;box-shadow:var(--shadow-sm);transition:.35s cubic-bezier(.16,1,.3,1)}
 .mem-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(255,122,26,.5)}
-.mem-card.gold{border-color:rgba(255,122,26,.55);background:linear-gradient(120deg,rgba(255,122,26,.16),transparent 46%),var(--card)}
+.mem-card.featured{border-color:rgba(255,122,26,.55);background:linear-gradient(120deg,rgba(255,122,26,.16),transparent 46%),var(--card)}
 .mem-head{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;min-width:0;
   padding-right:34px;border-right:1px solid var(--line)}
 .mem-tag{font-family:'Bebas Neue',Impact,sans-serif;font-size:2rem;line-height:1.05;letter-spacing:.06em;color:var(--text)}
-.mem-card.gold .mem-tag{color:var(--accent)}
+.mem-card.featured .mem-tag{color:var(--accent)}
 .mem-price{font-family:'Bebas Neue',Impact,sans-serif;font-size:3.2rem;line-height:1;color:var(--accent);
   font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum","tnum";letter-spacing:0}
 .mem-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:15px 32px;min-width:0}
+.mem-card.featured{grid-template-columns:200px 1fr;gap:30px}
+.mem-list.three{grid-template-columns:repeat(3,1fr);gap:15px 30px}
 .mem-list li{position:relative;padding-left:26px;min-width:0;color:var(--muted);font-size:.96rem;line-height:1.6}
 .mem-list li::before{content:"\2605";position:absolute;left:0;top:1px;color:var(--accent);font-size:.85rem}
 .mem-list li b{color:var(--text)}
 .mem-note{max-width:760px;margin:26px auto 0;text-align:center;color:var(--muted);font-size:.92rem;font-style:italic}
 @media(max-width:900px){
-  .mem-card{grid-template-columns:1fr;gap:20px;padding:26px 24px}
+  .mem-card,.mem-card.featured{grid-template-columns:1fr;gap:20px;padding:26px 24px}
   .mem-head{flex-direction:row;align-items:baseline;justify-content:space-between;width:100%;
     gap:14px;padding:0 0 14px;border-right:none;border-bottom:1px solid var(--line)}
-  .mem-list{grid-template-columns:1fr;gap:14px}
+  .mem-list,.mem-list.three{grid-template-columns:1fr;gap:14px}
 }
 
 /* sponsor wall — a picture with every name, in a grid */
@@ -568,45 +570,37 @@ footer ul li a:hover{color:var(--accent-soft)}
   <div class="wrap">
     <p class="eyebrow">Memberships</p>
     <h1>BECOME A <em>MEMBER</em></h1>
-    <p class="lede">Two ways to join. Both come with a vote on who fills our board seats, and both put you behind every sport at Sandwich High School.</p>
+    <p class="lede">There's one membership and it costs nothing. You don't buy it &mdash; you earn it by volunteering once. Every shift after that earns you into a game.</p>
   </div>
 </section>
 
-<!-- THE TWO MEMBERSHIPS -->
+<!-- THE MEMBERSHIP -->
 <section style="padding-top:8px">
-  <div class="wrap" style="max-width:1000px">
-    <div class="mem-grid reveal">
+  <div class="wrap" style="max-width:1120px">
+    <article class="mem-card featured reveal">
+      <div class="mem-head">
+        <span class="mem-tag">Basic Booster</span>
+        <div class="mem-price">FREE</div>
+      </div>
+      <ul class="mem-list three">
+        <li><b>No fee.</b> There is no cost associated with this membership. Your Basic Membership begins after the first time you volunteer.</li>
+        <li><b>Earn Booster Event Passes.</b> Volunteer at more than one booster event to earn passes &mdash; one pass gets you free access to one home SHS athletic event. Excludes post-season play.</li>
+        <li><b>Voting privileges.</b> Basic Booster Members vote on filling Sandwich Boosters board positions.</li>
+      </ul>
+    </article>
+  </div>
+</section>
 
-      <article class="mem-card gold">
-        <div class="mem-head">
-          <span class="mem-tag">Gold Booster</span>
-          <div class="mem-price">$40</div>
-        </div>
-        <ul class="mem-list">
-          <li><b>Direct your fee to a sport.</b> Fulfill one qualifying volunteer opportunity &mdash; a JV or Varsity football game, or one shift in the Sandwich Fair Sports Boosters Booth &mdash; and your $40 goes to the sport you choose.</li>
-          <li><b>2 Booster Event Passes.</b> Free access to two home SHS athletic events of your choosing. Excludes post-season play.</li>
-          <li><b>Earn more passes.</b> Volunteer at more than one booster event to earn additional passes &mdash; one pass per volunteer slot.</li>
-          <li><b>Voting privileges</b> on filling Sandwich Boosters board positions.</li>
-          <li><b>Express concessions line.</b> Access to the Gold Member Express Concessions Line at home football games when available. Member card required.</li>
-        </ul>
-      </article>
-
-      <article class="mem-card">
-        <div class="mem-head">
-          <span class="mem-tag">Basic Booster</span>
-          <div class="mem-price">FREE</div>
-        </div>
-        <ul class="mem-list">
-          <li><b>No fee.</b> There is no fee associated with this membership. Basic Membership begins after the first time you volunteer.</li>
-          <li><b>Earn Booster Event Passes.</b> Volunteer at more than one booster event to earn passes &mdash; one pass gets you free access to one home SHS athletic event. Excludes post-season play.</li>
-          <li><b>Voting privileges</b> on filling Sandwich Boosters board positions.</li>
-        </ul>
-      </article>
-
+<!-- HOW YOU JOIN -->
+<section class="band" style="padding-top:52px;padding-bottom:64px">
+  <div class="wrap" style="max-width:900px">
+    <p class="eyebrow" style="text-align:center">How you join</p>
+    <h2 class="sec-title">WORK <em>ONE SHIFT</em></h2>
+    <p class="sec-sub">Volunteer at a booster event and you're a member. Two of the shifts that count:</p>
+    <div class="ways reveal" style="margin-top:30px">
+      <span class="way">A JV or Varsity football game</span>
+      <span class="way">One shift in the Sandwich Fair Sports Boosters Booth</span>
     </div>
-
-    <p class="mem-note reveal">Volunteering isn't required, but it's encouraged. If you choose not to volunteer you can't direct your membership fee to a sport &mdash; you still get every other benefit.</p>
-
     <div style="text-align:center;margin-top:34px">
       <a class="btn btn-primary" href="contact.html">Ask About Joining</a>
     </div>
