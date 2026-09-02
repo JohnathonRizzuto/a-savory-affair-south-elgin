@@ -147,6 +147,10 @@ header.scrolled .brand img{width:38px;height:38px}
 .page-hero h1 em{font-style:normal;color:var(--accent)}
 .page-hero .lede{max-width:640px;color:var(--muted);font-size:1.12rem;margin-top:18px}
 .page-hero .eyebrow{text-align:left;margin-bottom:14px}
+/* opt-in centred hero */
+.page-hero.center{text-align:center}
+.page-hero.center .eyebrow{text-align:center}
+.page-hero.center .lede{margin-left:auto;margin-right:auto}
 
 /* dark band with smooth transitions (no hard cuts) */
 .band{background:linear-gradient(180deg,var(--bg) 0%,var(--deep) 14%,var(--deep) 86%,var(--bg) 100%)}
@@ -580,17 +584,13 @@ body.pop-open{overflow:hidden}
   .pop-list a:hover,.pop-list a:focus-visible{transform:none}
 }
 
-/* sponsorship actions — small flyer link, then the way to actually reach them */
-.sponsor-actions{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:22px}
-.btn-sm{padding:11px 22px;font-size:11.5px;letter-spacing:.14em}
+/* sponsorship actions — the pair that closes the sponsor wall */
+.sponsor-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:44px}
 
 /* sponsor tiers — the club's top-level sponsors get a bigger card */
 .tier-label{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
   font-family:'Bebas Neue',Impact,sans-serif;font-size:1.45rem;
   letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:40px 0 16px}
-/* the level's price, straight off the club's flyer */
-.tier-label span{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:800;
-  letter-spacing:.16em;color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:4px 12px}
 .tier-label:first-of-type{margin-top:34px}
 .sponsor-grid.top{grid-template-columns:repeat(2,1fr);gap:22px;max-width:720px;margin:0 auto}
 .sponsor-grid.top .sponsor-card{border-color:rgba(255,122,26,.4)}
