@@ -583,6 +583,17 @@ body.pop-open{overflow:hidden}
 /* sponsorship actions — small flyer link, then the way to actually reach them */
 .sponsor-actions{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:22px}
 .btn-sm{padding:11px 22px;font-size:11.5px;letter-spacing:.14em}
+
+/* sponsor tiers — the club's top-level sponsors get a bigger card */
+.tier-label{text-align:center;font-family:'Bebas Neue',Impact,sans-serif;font-size:1.45rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:40px 0 16px}
+.tier-label:first-of-type{margin-top:34px}
+.sponsor-grid.top{grid-template-columns:repeat(2,1fr);gap:22px;max-width:720px;margin:0 auto}
+.sponsor-grid.top .sponsor-card{border-color:rgba(255,122,26,.4)}
+.sponsor-grid.top .sp-shot{aspect-ratio:16/9}
+.sponsor-grid.top .sp-body{padding:18px 18px 20px}
+.sponsor-grid.top .sp-body h3{font-size:1.45rem}
+@media(max-width:560px){.sponsor-grid.top{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -635,43 +646,53 @@ body.pop-open{overflow:hidden}
     <p class="eyebrow">Thank You</p>
     <h2 class="sec-title">OUR <em>SPONSORS</em></h2>
     <p class="sec-sub">The businesses and families behind Sandwich athletics.</p>
-    <!-- SPONSOR WALL: placeholder cards awaiting the club's real sponsor list.
-         Each card takes a photo or logo, the business name, and a link to their own site.
-         Swap the .sp-shot placeholder for <img src="img/sponsor-NAME.jpg" alt="..."> when supplied.
-         DO NOT publish names until the club provides them. -->
-    <div class="sponsor-grid reveal" style="margin-top:38px">
-      <a class="sponsor-card" href="#REPLACE-WITH-SPONSOR-WEBSITE" target="_blank" rel="noopener">
-        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Photo to come</small></span>
+
+    <!-- SPONSOR WALL
+         Midwestern and Groot are this season's top-level sponsors.
+         STILL NEEDED per sponsor: full business name, website URL, logo/photo.
+         When a website is supplied, swap the wrapping <div class="sponsor-card">
+         for <a class="sponsor-card" href="..." target="_blank" rel="noopener">.
+         When a logo is supplied, replace the <svg>+<small> inside .sp-shot with
+         <img src="img/sponsor-NAME.jpg" alt="...">.
+         DO NOT publish a name the club has not confirmed. -->
+    <p class="tier-label reveal">Top Level Sponsors</p>
+    <div class="sponsor-grid top reveal">
+      <div class="sponsor-card">
+        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Logo to come</small></span>
+        <span class="sp-body"><h3>Midwestern</h3><p>Sandwich, IL</p></span>
+      </div>
+      <div class="sponsor-card">
+        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Logo to come</small></span>
+        <span class="sp-body"><h3>Groot</h3><p>Sandwich, IL</p></span>
+      </div>
+    </div>
+
+    <p class="tier-label reveal">Supporting Sponsors</p>
+    <div class="sponsor-grid reveal">
+      <div class="sponsor-card">
+        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Logo to come</small></span>
         <span class="sp-body"><h3>SPONSOR NAME</h3><p>Sandwich, IL</p></span>
-      </a>
-      <a class="sponsor-card" href="#REPLACE-WITH-SPONSOR-WEBSITE" target="_blank" rel="noopener">
-        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Photo to come</small></span>
+      </div>
+      <div class="sponsor-card">
+        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Logo to come</small></span>
         <span class="sp-body"><h3>SPONSOR NAME</h3><p>Sandwich, IL</p></span>
-      </a>
-      <a class="sponsor-card" href="#REPLACE-WITH-SPONSOR-WEBSITE" target="_blank" rel="noopener">
-        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Photo to come</small></span>
+      </div>
+      <div class="sponsor-card">
+        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Logo to come</small></span>
         <span class="sp-body"><h3>SPONSOR NAME</h3><p>Sandwich, IL</p></span>
-      </a>
-      <a class="sponsor-card" href="#REPLACE-WITH-SPONSOR-WEBSITE" target="_blank" rel="noopener">
-        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Photo to come</small></span>
+      </div>
+      <div class="sponsor-card">
+        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Logo to come</small></span>
         <span class="sp-body"><h3>SPONSOR NAME</h3><p>Sandwich, IL</p></span>
-      </a>
-      <a class="sponsor-card" href="#REPLACE-WITH-SPONSOR-WEBSITE" target="_blank" rel="noopener">
-        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Photo to come</small></span>
+      </div>
+      <div class="sponsor-card">
+        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Logo to come</small></span>
         <span class="sp-body"><h3>SPONSOR NAME</h3><p>Sandwich, IL</p></span>
-      </a>
-      <a class="sponsor-card" href="#REPLACE-WITH-SPONSOR-WEBSITE" target="_blank" rel="noopener">
-        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Photo to come</small></span>
+      </div>
+      <div class="sponsor-card">
+        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Logo to come</small></span>
         <span class="sp-body"><h3>SPONSOR NAME</h3><p>Sandwich, IL</p></span>
-      </a>
-      <a class="sponsor-card" href="#REPLACE-WITH-SPONSOR-WEBSITE" target="_blank" rel="noopener">
-        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Photo to come</small></span>
-        <span class="sp-body"><h3>SPONSOR NAME</h3><p>Sandwich, IL</p></span>
-      </a>
-      <a class="sponsor-card" href="#REPLACE-WITH-SPONSOR-WEBSITE" target="_blank" rel="noopener">
-        <span class="sp-shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.6"/><path d="M21 16l-5.5-5.5L6 19"/></svg><small>Photo to come</small></span>
-        <span class="sp-body"><h3>SPONSOR NAME</h3><p>Sandwich, IL</p></span>
-      </a>
+      </div>
     </div>
   </div>
 </section>
