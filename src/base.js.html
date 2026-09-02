@@ -1,0 +1,40 @@
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40));
+hdr.classList.toggle('scrolled',scrollY>40);
+const tg=document.getElementById('menuToggle'),nl=document.getElementById('navLinks');
+tg.addEventListener('click',()=>nl.classList.toggle('open'));
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* contact popup — anything marked data-contact-pop opens it */
+const pop=document.getElementById('contactPop');
+if(pop){
+  let opener=null;
+  const focusables=()=>pop.querySelectorAll('a[href],button:not([disabled])');
+  function popOpen(t){
+    opener=t;pop.hidden=false;document.body.classList.add('pop-open');
+    /* land on the email, not the close button */
+    const first=pop.querySelector('.pop-list a')||pop.querySelector('.pop-x');if(first)first.focus();
+  }
+  function popClose(){
+    pop.hidden=true;document.body.classList.remove('pop-open');
+    if(opener&&document.contains(opener))opener.focus();
+    opener=null;
+  }
+  document.querySelectorAll('[data-contact-pop]').forEach(b=>
+    b.addEventListener('click',e=>{e.preventDefault();popOpen(b);}));
+  pop.querySelectorAll('[data-pop-close]').forEach(b=>b.addEventListener('click',popClose));
+  addEventListener('keydown',e=>{
+    if(pop.hidden)return;
+    if(e.key==='Escape'){popClose();return;}
+    if(e.key!=='Tab')return;
+    const f=focusables();if(!f.length)return;
+    const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  });
+}
+</script>
