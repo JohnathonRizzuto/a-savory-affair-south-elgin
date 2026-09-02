@@ -584,8 +584,8 @@ body.pop-open{overflow:hidden}
   .pop-list a:hover,.pop-list a:focus-visible{transform:none}
 }
 
-/* sponsorship actions — the pair that closes the sponsor wall */
-.sponsor-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:44px}
+/* sponsorship actions — the pair sitting under the hero paragraph */
+.sponsor-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:30px}
 
 /* sponsor tiers — the club's top-level sponsors get a bigger card */
 .tier-label{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
@@ -605,6 +605,11 @@ body.pop-open{overflow:hidden}
   font-size:.98rem;font-weight:700;color:var(--text);transition:.25s}
 a.ob-name:hover,a.ob-name:focus-visible{border-color:var(--accent);color:var(--accent);
   background:var(--card-soft);transform:translateY(-2px)}
+
+/* the odd card out on the final row, centred instead of hanging left */
+.sponsor-grid > .solo{grid-column:1 / -1;justify-self:center;width:calc((100% - 54px)/4)}
+@media(max-width:900px){.sponsor-grid > .solo{width:calc((100% - 36px)/3)}}
+@media(max-width:680px){.sponsor-grid > .solo{width:calc((100% - 14px)/2)}}
 
 /* ---- page-specific ---- */
 /* home is a menu: hero lockup + four buttons, nothing else */

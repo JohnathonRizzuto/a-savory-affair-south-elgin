@@ -584,8 +584,8 @@ body.pop-open{overflow:hidden}
   .pop-list a:hover,.pop-list a:focus-visible{transform:none}
 }
 
-/* sponsorship actions — the pair that closes the sponsor wall */
-.sponsor-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:44px}
+/* sponsorship actions — the pair sitting under the hero paragraph */
+.sponsor-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:30px}
 
 /* sponsor tiers — the club's top-level sponsors get a bigger card */
 .tier-label{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
@@ -605,6 +605,11 @@ body.pop-open{overflow:hidden}
   font-size:.98rem;font-weight:700;color:var(--text);transition:.25s}
 a.ob-name:hover,a.ob-name:focus-visible{border-color:var(--accent);color:var(--accent);
   background:var(--card-soft);transform:translateY(-2px)}
+
+/* the odd card out on the final row, centred instead of hanging left */
+.sponsor-grid > .solo{grid-column:1 / -1;justify-self:center;width:calc((100% - 54px)/4)}
+@media(max-width:900px){.sponsor-grid > .solo{width:calc((100% - 36px)/3)}}
+@media(max-width:680px){.sponsor-grid > .solo{width:calc((100% - 14px)/2)}}
 </style>
 </head>
 <body>
@@ -634,6 +639,12 @@ a.ob-name:hover,a.ob-name:focus-visible{border-color:var(--accent);color:var(--a
     <p class="eyebrow">Sponsorship</p>
     <h1>PARTNER WITH <em>SANDWICH ATHLETICS</em></h1>
     <p class="lede">Sponsoring the Boosters puts your business in front of the whole town all season &mdash; and every dollar reaches every SHS athletic program, not just one team. This year we're raising <b>$80,000</b> for press boxes at the softball and soccer fields.</p>
+
+    <div class="sponsor-actions reveal">
+      <!-- The club's own 2-sided sponsorship flyer, served from this site so the link can't rot -->
+      <a class="btn btn-ghost" href="docs/sponsorship-flyer.pdf" target="_blank" rel="noopener">Become a Sponsor</a>
+      <button class="btn btn-primary" type="button" data-contact-pop>Get in Touch</button>
+    </div>
   </div>
 </section>
 
@@ -674,6 +685,10 @@ a.ob-name:hover,a.ob-name:focus-visible{border-color:var(--accent);color:var(--a
         <span class="sp-shot"><img src="img/sponsors/conrads-lawn-care.jpg" alt="Conrad&#x27;s Lawn Care logo" loading="lazy" /></span>
         <span class="sp-body"><h3>Conrad&#x27;s Lawn Care</h3></span>
       </a>
+      <a class="sponsor-card" href="https://rizzutobarbeycarpentry.com" target="_blank" rel="noopener">
+        <span class="sp-shot"><img src="img/sponsors/rizzuto-barbey.jpg" alt="Rizzuto &amp; Barbey Carpentry logo" loading="lazy" /></span>
+        <span class="sp-body"><h3>Rizzuto &amp; Barbey Carpentry</h3></span>
+      </a>
       <a class="sponsor-card" href="https://fabtekaero.com/" target="_blank" rel="noopener">
         <span class="sp-shot"><img src="img/sponsors/fabtek.jpg" alt="FABTEK logo" loading="lazy" /></span>
         <span class="sp-body"><h3>FABTEK</h3></span>
@@ -686,10 +701,6 @@ a.ob-name:hover,a.ob-name:focus-visible{border-color:var(--accent);color:var(--a
         <span class="sp-shot"><img src="img/sponsors/ross-mechanical.jpg" alt="Ross Mechanical Group, Inc. logo" loading="lazy" /></span>
         <span class="sp-body"><h3>Ross Mechanical Group, Inc.</h3></span>
       </a>
-      <div class="sponsor-card">
-        <span class="sp-shot"><img src="img/sponsors/innovative-graphics.jpg" alt="Innovative Graphics logo" loading="lazy" /></span>
-        <span class="sp-body"><h3>Innovative Graphics</h3></span>
-      </div>
       <a class="sponsor-card" href="https://www.fnicgroup.com/" target="_blank" rel="noopener">
         <span class="sp-shot"><img src="img/sponsors/fnic.jpg" alt="FNIC logo" loading="lazy" /></span>
         <span class="sp-body"><h3>FNIC</h3></span>
@@ -706,26 +717,24 @@ a.ob-name:hover,a.ob-name:focus-visible{border-color:var(--accent);color:var(--a
         <span class="sp-shot"><img src="img/sponsors/carsyn-cartage.jpg" alt="Carsyn Cartage Co. logo" loading="lazy" /></span>
         <span class="sp-body"><h3>Carsyn Cartage Co.</h3></span>
       </a>
-      <a class="sponsor-card" href="https://www.leezplacesandwich.com/" target="_blank" rel="noopener">
+      <div class="sponsor-card">
         <span class="sp-shot"><img src="img/sponsors/leez-place.jpg" alt="Lee&#x27;z Place logo" loading="lazy" /></span>
         <span class="sp-body"><h3>Lee&#x27;z Place</h3></span>
-      </a>
+      </div>
+      <div class="sponsor-card solo">
+        <span class="sp-shot"><img src="img/sponsors/innovative-graphics.jpg" alt="Innovative Graphics logo" loading="lazy" /></span>
+        <span class="sp-body"><h3>Innovative Graphics</h3></span>
+      </div>
     </div>
 
     <p class="tier-label reveal">Orange and Black Sponsors</p>
     <div class="ob-grid reveal">
-      <span class="ob-name">Harlan Bank</span>
+      <a class="ob-name" href="https://www.hbtbank.com/" target="_blank" rel="noopener">Heartland Bank and Trust</a>
       <a class="ob-name" href="https://www.justintimeheroes.com/" target="_blank" rel="noopener">Just In Time</a>
       <a class="ob-name" href="https://www.fnbo.com/" target="_blank" rel="noopener">FNBO</a>
       <a class="ob-name" href="https://www.facebook.com/p/Johnny-Ks-100063643568553/" target="_blank" rel="noopener">Johnny K&#x27;s</a>
       <a class="ob-name" href="https://swansonrealestate.net/" target="_blank" rel="noopener">Swanson Real Estate</a>
       <a class="ob-name" href="https://www.subway.com/" target="_blank" rel="noopener">Subway</a>
-    </div>
-
-    <div class="sponsor-actions reveal">
-      <!-- The club's own 2-sided sponsorship flyer, served from this site so the link can't rot -->
-      <a class="btn btn-ghost" href="docs/sponsorship-flyer.pdf" target="_blank" rel="noopener">Become a Sponsor</a>
-      <button class="btn btn-primary" type="button" data-contact-pop>Get in Touch</button>
     </div>
   </div>
 </section>
